@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		785207E32AD873A200F1DE3C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785207E22AD873A200F1DE3C /* Category.swift */; };
+		785207E52AD873D700F1DE3C /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785207E42AD873D700F1DE3C /* Challenge.swift */; };
+		785207E72AD8741B00F1DE3C /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785207E62AD8741B00F1DE3C /* Progress.swift */; };
+		785207E92AD8745100F1DE3C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785207E82AD8745100F1DE3C /* HomeView.swift */; };
+		785207EB2AD8768E00F1DE3C /* NoChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785207EA2AD8768E00F1DE3C /* NoChallengeView.swift */; };
+		785207ED2AD8769800F1DE3C /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785207EC2AD8769800F1DE3C /* ChallengeView.swift */; };
+		785207EF2AD876B700F1DE3C /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785207EE2AD876B700F1DE3C /* OnBoardingView.swift */; };
+		785207F12AD876C500F1DE3C /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785207F02AD876C500F1DE3C /* SavedView.swift */; };
 		78D91BCD2AD87306007B88C4 /* Desafika2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D91BCC2AD87306007B88C4 /* Desafika2App.swift */; };
 		78D91BCF2AD87306007B88C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D91BCE2AD87306007B88C4 /* ContentView.swift */; };
 		78D91BD12AD87308007B88C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78D91BD02AD87308007B88C4 /* Assets.xcassets */; };
@@ -14,6 +22,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		785207E22AD873A200F1DE3C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		785207E42AD873D700F1DE3C /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		785207E62AD8741B00F1DE3C /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
+		785207E82AD8745100F1DE3C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		785207EA2AD8768E00F1DE3C /* NoChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoChallengeView.swift; sourceTree = "<group>"; };
+		785207EC2AD8769800F1DE3C /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
+		785207EE2AD876B700F1DE3C /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		785207F02AD876C500F1DE3C /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
 		78D91BC92AD87306007B88C4 /* Desafika2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Desafika2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78D91BCC2AD87306007B88C4 /* Desafika2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Desafika2App.swift; sourceTree = "<group>"; };
 		78D91BCE2AD87306007B88C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +48,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		785207DE2AD8735600F1DE3C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				785207E22AD873A200F1DE3C /* Category.swift */,
+				785207E42AD873D700F1DE3C /* Challenge.swift */,
+				785207E62AD8741B00F1DE3C /* Progress.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		785207DF2AD8735B00F1DE3C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				785207EE2AD876B700F1DE3C /* OnBoardingView.swift */,
+				785207E82AD8745100F1DE3C /* HomeView.swift */,
+				785207EA2AD8768E00F1DE3C /* NoChallengeView.swift */,
+				785207EC2AD8769800F1DE3C /* ChallengeView.swift */,
+				785207F02AD876C500F1DE3C /* SavedView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		785207E02AD8736200F1DE3C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		78D91BC02AD87306007B88C4 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +98,9 @@
 			children = (
 				78D91BCC2AD87306007B88C4 /* Desafika2App.swift */,
 				78D91BCE2AD87306007B88C4 /* ContentView.swift */,
+				785207DF2AD8735B00F1DE3C /* View */,
+				785207E02AD8736200F1DE3C /* ViewModel */,
+				785207DE2AD8735600F1DE3C /* Model */,
 				78D91BD02AD87308007B88C4 /* Assets.xcassets */,
 				78D91BD22AD87308007B88C4 /* Preview Content */,
 			);
@@ -138,7 +186,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				78D91BCF2AD87306007B88C4 /* ContentView.swift in Sources */,
+				785207E72AD8741B00F1DE3C /* Progress.swift in Sources */,
+				785207E52AD873D700F1DE3C /* Challenge.swift in Sources */,
+				785207EF2AD876B700F1DE3C /* OnBoardingView.swift in Sources */,
+				785207E92AD8745100F1DE3C /* HomeView.swift in Sources */,
+				785207ED2AD8769800F1DE3C /* ChallengeView.swift in Sources */,
+				785207F12AD876C500F1DE3C /* SavedView.swift in Sources */,
 				78D91BCD2AD87306007B88C4 /* Desafika2App.swift in Sources */,
+				785207EB2AD8768E00F1DE3C /* NoChallengeView.swift in Sources */,
+				785207E32AD873A200F1DE3C /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
