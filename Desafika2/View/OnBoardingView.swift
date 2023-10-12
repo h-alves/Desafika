@@ -15,20 +15,24 @@ struct OnBoardingView: View {
                 Text("Bem vindo(a)!")
                     .font(.largeTitle)
                     .fontWeight(.bold)
+                    .foregroundStyle(.meiaNoite)
                 
                 VStack(spacing: 16) {
                     HStack {
                         Image(systemName: "sparkles")
                             .font(.largeTitle)
                             .fontWeight(.bold)
+                            .foregroundStyle(.papaya)
                         
                         VStack {
                             Text("Descubra novas ideias")
                                 .font(.title2)
                                 .fontWeight(.bold)
+                                .foregroundStyle(.meiaNoite)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                             Text("Receba ideias diferenciadas de atividades para fazer em casal")
                                 .font(.callout)
+                                .foregroundStyle(.meiaNoite)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         }
                     }
@@ -37,14 +41,17 @@ struct OnBoardingView: View {
                         Image(systemName: "building.2.crop.circle.fill")
                             .font(.largeTitle)
                             .fontWeight(.bold)
+                            .foregroundStyle(.papaya)
                         
                         VStack {
                             Text("Sugestão de lugares")
                                 .font(.title2)
                                 .fontWeight(.bold)
+                                .foregroundStyle(.meiaNoite)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                             Text("Lugares são sugeridos de forma customizada com cada desafio")
                                 .font(.callout)
+                                .foregroundStyle(.meiaNoite)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         }
                     }
@@ -53,14 +60,17 @@ struct OnBoardingView: View {
                         Image(systemName: "bookmark.circle.fill")
                             .font(.largeTitle)
                             .fontWeight(.bold)
+                            .foregroundStyle(.papaya)
                         
                         VStack {
                             Text("Salve seu progresso")
                                 .font(.title2)
                                 .fontWeight(.bold)
+                                .foregroundStyle(.meiaNoite)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                             Text("Conclua desafios e tenha um histórico das suas atividades")
                                 .font(.callout)
+                                .foregroundStyle(.meiaNoite)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         }
                     }
@@ -77,7 +87,7 @@ struct OnBoardingView: View {
                     .foregroundStyle(.white)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 16)
-                    .background(.red)
+                    .background(.quentão)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
             }
             

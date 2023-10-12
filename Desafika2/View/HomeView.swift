@@ -16,9 +16,11 @@ struct HomeView: View {
                 Text("Prontos para um novo desafio?")
                     .font(.largeTitle)
                     .fontWeight(.bold)
+                    .foregroundStyle(.meiaNoite)
                     .multilineTextAlignment(.center)
                 Text("Selecione as categorias que desejar e clique no rostinho para gerar um desafio!")
                     .font(.callout)
+                    .foregroundStyle(.meiaNoite)
                     .multilineTextAlignment(.center)
             }
             .frame(maxWidth: 300)
@@ -32,6 +34,8 @@ struct HomeView: View {
             VStack {
                 Text("Sugerir lugares em um raio de:")
                     .font(.footnote)
+                    .foregroundStyle(.meiaNoite)
+                    .opacity(0.5)
                 
                 // Slider
             }
@@ -43,6 +47,8 @@ struct HomeView: View {
                 Text("Gerar desafio")
                     .font(.footnote)
                     .fontWeight(.semibold)
+                    .foregroundStyle(.meiaNoite)
+                    .opacity(0.5)
             }
         }
         .padding(.horizontal, 32)

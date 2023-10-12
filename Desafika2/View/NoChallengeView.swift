@@ -9,7 +9,14 @@ import SwiftUI
 
 struct NoChallengeView: View {
     var body: some View {
-        Text("Hello, World!")
+        HStack {
+            Image(systemName: "circle")
+            Text("Vocês já completaram todos os desafios possíveis!")
+                .font(.footnote)
+                .foregroundStyle(.meiaNoite)
+                .opacity(0.5)
+        }
+        .padding(.horizontal, 32)
     }
 }
 
