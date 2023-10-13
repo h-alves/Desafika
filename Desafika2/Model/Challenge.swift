@@ -7,8 +7,12 @@
 
 import Foundation
 
-struct Challenge {
-    let challenge: String
+struct Challenge: Equatable {
+    static func == (lhs: Challenge, rhs: Challenge) -> Bool {
+        return lhs.description == rhs.description
+    }
+    
+    let description: String
     let category: Category
-    let progress: Progress
+    var progress: Progress
 }
