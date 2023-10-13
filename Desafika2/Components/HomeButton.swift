@@ -12,14 +12,18 @@ struct HomeButton: View {
     var mainFunction: () -> Void
     
     var body: some View {
-        ZStack {
-            Circle()
-                .foregroundStyle(buttonColor())
-                .opacity(opacity())
-                .frame(width: 180)
-            Image(image())
-                .resizable()
-                .frame(width: 120, height: 120)
+        Button {
+            mainFunction()
+        } label: {
+            ZStack {
+                Circle()
+                    .foregroundStyle(buttonColor())
+                    .opacity(opacity())
+                    .frame(width: 180)
+                Image(image())
+                    .resizable()
+                    .frame(width: 120, height: 120)
+            }
         }
     }
     

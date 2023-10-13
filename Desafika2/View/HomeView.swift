@@ -28,7 +28,12 @@ struct HomeView: View {
             
             // Categorias
             VStack {
-                
+                ForEach(viewModel.list, id: \.title) { category in
+                    CategoryButton(category: category) {
+                        viewModel.selectCategory(category: category)
+                        print(category.isSelected)
+                    }
+                }
             }
             
             // Raio de distância
@@ -45,7 +50,7 @@ struct HomeView: View {
             VStack(spacing: 12) {
                 // Componente de botão
                 HomeButton(activated: true) {
-                    print("Clicado")
+                    print(viewModel.list)
                 }
                 
                 Text("Gerar desafio")

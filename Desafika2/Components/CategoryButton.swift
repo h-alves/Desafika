@@ -8,11 +8,65 @@
 import SwiftUI
 
 struct CategoryButton: View {
+    @State var category: Category
+    var mainFunction: () -> Void
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button {
+            mainFunction()
+            category.isSelected.toggle()
+        } label: {
+            HStack {
+                Image(systemName: buttonSymbol())
+                    .font(.callout)
+                    .fontWeight(.bold)
+                    .foregroundStyle(textColor())
+                
+                Text(category.title.capitalized)
+                    .font(.subheadline)
+                    .fontWeight(.bold)
+                    .foregroundStyle(textColor())
+            }
+            .padding(.horizontal, 12)
+            .padding(.vertical, 8)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(.quentão, lineWidth: 4)
+            )
+            .background(backgroundColor())
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+        }
+    }
+    
+    func backgroundColor() -> Color {
+        if category.isSelected {
+            return .quentão
+        }
+        return .opala
+    }
+    
+    func textColor() -> Color {
+        if category.isSelected {
+            return .opala
+        }
+        return .quentão
+    }
+    
+    func buttonSymbol() -> String {
+        if category.isSelected {
+            return "checkmark.square.fill"
+        }
+        return "square"
     }
 }
 
 #Preview {
-    CategoryButton()
+    VStack {
+        CategoryButton(category: Category(title: "teste", symbol: "house", isSelected: false)) {
+            print("a")
+        }
+        CategoryButton(category: Category(title: "teste", symbol: "house", isSelected: true)) {
+            print("b")
+        }
+    }
 }
