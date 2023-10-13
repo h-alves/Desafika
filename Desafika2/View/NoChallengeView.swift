@@ -10,7 +10,7 @@ import SwiftUI
 struct NoChallengeView: View {
     var body: some View {
         HStack {
-            Image(systemName: "circle")
+            Image("noChallenge")
             Text("Vocês já completaram todos os desafios possíveis!")
                 .font(.footnote)
                 .foregroundStyle(.meiaNoite)

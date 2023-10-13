@@ -15,7 +15,7 @@ struct ChallengeView: View {
             Spacer()
             
             // Desafio & Botões
-            VStack {
+            VStack(spacing: 24) {
                 VStack(spacing: 16) {
                     VStack {
                         Image(systemName: "heart.fill")
@@ -73,28 +73,44 @@ struct ChallengeView: View {
             
             // Lugares
             VStack {
-                HStack {
-                    // Imagem do Casalzinho
-                    Image(systemName: "circle")
-                    
-                    Text("Sugerimos alguns lugares para realizar esse desafio:")
-                        .font(.footnote)
-                        .foregroundStyle(.meiaNoite)
-                        .opacity(0.5)
-                        .frame(width: 160)
-                }
-                
-                ScrollView(.horizontal) {
-                    HStack {
-                        // Placeholder
-                        ForEach(1...10, id: \.self) { _ in
-                            Text("teste")
-                        }
+                if viewModel.challenge.category == Category.house {
+                    HStack(spacing: 16) {
+                        Image("home")
+                            .resizable()
+                            .frame(width: 60, height: 54)
+                        
+                        Text("Sugerimos fazer essa atividade em casa.")
+                            .font(.footnote)
+                            .foregroundStyle(.meiaNoite)
+                            .opacity(0.5)
+                            .frame(width: 130)
                     }
-                    .padding(.horizontal, 32)
+                } else {
+                    HStack(spacing: 16) {
+                        // Imagem do Casalzinho
+                        Image("coupleLove")
+                            .resizable()
+                            .frame(width: 80, height: 42.22)
+                        
+                        Text("Sugerimos alguns lugares para realizar esse desafio:")
+                            .font(.footnote)
+                            .foregroundStyle(.meiaNoite)
+                            .opacity(0.5)
+                            .frame(width: 160)
+                    }
+                    
+                    ScrollView(.horizontal) {
+                        HStack {
+                            // Placeholder
+                            ForEach(1...10, id: \.self) { _ in
+                                Text("teste")
+                            }
+                        }
+                        .padding(.horizontal, 32)
+                    }
+                    .padding(.horizontal, -32)
+                    .scrollIndicators(.hidden)
                 }
-                .padding(.horizontal, -32)
-                .scrollIndicators(.hidden)
             }
             
             Spacer()
@@ -102,6 +118,9 @@ struct ChallengeView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(.horizontal, 32)
         .background(.opala)
+        .onAppear {
+            viewModel.getRandomChallenge()
+        }
     }
 }
 

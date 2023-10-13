@@ -18,7 +18,9 @@ struct SavedView: View {
                 // Em Progresso
                 VStack(spacing: 16) {
                     VStack(spacing: 12) {
-                        Image(systemName: "circle")
+                        Image("coupleLove")
+                            .resizable()
+                            .frame(width: 80, height: 42.22)
                         
                         Text("Desafios em progresso")
                             .font(.title)

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Category {
+struct Category: Equatable {
     let title: String
     let symbol: String
     var isSelected: Bool
