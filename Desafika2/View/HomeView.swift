@@ -42,8 +42,11 @@ struct HomeView: View {
             }
             
             // Botão
-            VStack {
+            VStack(spacing: 12) {
                 // Componente de botão
+                HomeButton(activated: true) {
+                    print("Clicado")
+                }
                 
                 Text("Gerar desafio")
                     .font(.footnote)

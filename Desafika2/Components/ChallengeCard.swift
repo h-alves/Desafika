@@ -33,7 +33,7 @@ struct ChallengeCard: View {
 
 #Preview {
     VStack {
-        ChallengeCard(challenge: Challenge(description: "Desafio 1", category: Category(title: "Casa", symbol: "house.fill"), progress: Progress.none))
+        ChallengeCard(challenge: Challenge(description: "Desafio 1", category: Category.house, progress: Progress.none))
     }
     .frame(maxWidth: .infinity, maxHeight: .infinity)
     .background(.opala)
