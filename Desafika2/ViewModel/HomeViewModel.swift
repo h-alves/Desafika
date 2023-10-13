@@ -5,10 +5,11 @@
 //  Created by Henrique Semmer on 12/10/23.
 //
 
-import Foundation
+import SwiftUI
 
 class HomeViewModel: ObservableObject {
     @Published var list: [Category] = CategoryDataModel.shared.list
+    @Published var buttonActivated: Bool = false
     
     func updateList() {
         list = CategoryDataModel.shared.list
@@ -21,6 +22,17 @@ class HomeViewModel: ObservableObject {
         
         CategoryDataModel.shared.list[index!].isSelected.toggle()
         updateList()
+        toggleButton()
+    }
+    
+    func toggleButton() {
+        if list.contains(where: { c in
+            c.isSelected == true
+        }) {
+            buttonActivated = true
+        } else {
+            buttonActivated = false
+        }
     }
     
 }

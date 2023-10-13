@@ -49,7 +49,7 @@ struct HomeView: View {
             // Botão
             VStack(spacing: 12) {
                 // Componente de botão
-                HomeButton(activated: true) {
+                HomeButton(activated: viewModel.buttonActivated) {
                     print(viewModel.list)
                 }
                 
