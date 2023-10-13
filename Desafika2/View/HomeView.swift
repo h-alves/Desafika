@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct HomeView: View {
+    @ObservedObject var viewModel = HomeViewModel()
+    
     var body: some View {
         VStack(spacing: 28) {
-            
             // Texto
             VStack(spacing: 8) {
                 Text("Prontos para um novo desafio?")
@@ -51,7 +52,9 @@ struct HomeView: View {
                     .opacity(0.5)
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(.horizontal, 32)
+        .background(.opala)
     }
 }
 

@@ -16,7 +16,9 @@ struct NoChallengeView: View {
                 .foregroundStyle(.meiaNoite)
                 .opacity(0.5)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(.horizontal, 32)
+        .background(.opala)
     }
 }
 

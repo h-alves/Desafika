@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SavedView: View {
+    @ObservedObject var viewModel = SavedViewModel()
+    
     var body: some View {
         ScrollView {
             VStack(spacing: 32) {
@@ -17,6 +19,7 @@ struct SavedView: View {
                 VStack(spacing: 16) {
                     VStack(spacing: 12) {
                         Image(systemName: "circle")
+                        
                         Text("Desafios em progresso")
                             .font(.title)
                             .fontWeight(.bold)
@@ -24,8 +27,10 @@ struct SavedView: View {
                     }
                     
                     VStack(spacing: 12) {
-                        ForEach(1...3, id: \.self) { _ in
-                            Text("Tem que fazer")
+                        ForEach(viewModel.inProgress(), id: \.description) { c in
+                            SavedCard(challenge: c) {
+                                viewModel.finishChallenge(challenge: c)
+                            }
                         }
                     }
                 }
@@ -38,14 +43,21 @@ struct SavedView: View {
                         .foregroundStyle(.meiaNoite)
                         .opacity(0.5)
                     
-                    ForEach(1...10, id: \.self) { _ in
-                        Text("Teste")
+                    ForEach(viewModel.finished(), id: \.description) { c in
+                        SavedCard(challenge: c) {
+                            viewModel.unfinishChallenge(challenge: c)
+                        }
                     }
                 }
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(.horizontal, 32)
+        .background(.opala)
         .scrollIndicators(.hidden)
+        .onAppear {
+            viewModel.updateList()
+        }
     }
 }
 

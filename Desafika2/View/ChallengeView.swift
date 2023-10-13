@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct ChallengeView: View {
+    @ObservedObject var viewModel = ChallengeViewModel()
+    
     var body: some View {
         VStack {
+            Spacer()
+            
             // Desafio & Botões
             VStack {
                 VStack(spacing: 16) {
@@ -25,11 +29,17 @@ struct ChallengeView: View {
                     }
                     
                     // Componente de Desafio
+                    ChallengeCard(challenge: viewModel.challenge)
                 }
                 
                 HStack(alignment: .top, spacing: 16) {
                     VStack {
                         // Botão de Aceitar Desafio
+                        Button {
+                            viewModel.acceptChallenge()
+                        } label: {
+                            Text("aceitar")
+                        }
                         
                         Text("Aceito")
                             .font(.footnote)
@@ -44,6 +54,11 @@ struct ChallengeView: View {
                     
                     VStack {
                         // Botão de Mudar Desafio
+                        Button {
+                            viewModel.getRandomChallenge()
+                        } label: {
+                            Text("outro")
+                        }
                         
                         Text("Outro")
                             .font(.footnote)
@@ -53,6 +68,8 @@ struct ChallengeView: View {
                     }
                 }
             }
+            
+            Spacer()
             
             // Lugares
             VStack {
@@ -79,8 +96,12 @@ struct ChallengeView: View {
                 .padding(.horizontal, -32)
                 .scrollIndicators(.hidden)
             }
+            
+            Spacer()
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(.horizontal, 32)
+        .background(.opala)
     }
 }
 
