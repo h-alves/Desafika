@@ -35,4 +35,19 @@ class HomeViewModel: ObservableObject {
         }
     }
     
+    func getBinding(category: Category) -> Binding<Category?> {
+        let b = Binding<Category?> {
+            category
+        } set: { v in
+            if let v {
+//                let index = dataDesafios.desafios.firstIndex(of: desafio)!
+//                dataDesafios.desafios[index] = v
+                let index = CategoryDataModel.shared.list.firstIndex(of: category)!
+                CategoryDataModel.shared.list[index] = v
+            }
+        }
+        
+        return b
+    }
+    
 }

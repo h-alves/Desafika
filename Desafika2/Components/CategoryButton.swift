@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct CategoryButton: View {
-    @State var category: Category
+    @Binding var category: Category?
     var mainFunction: () -> Void
     
     var body: some View {
         Button {
             mainFunction()
-            category.isSelected.toggle()
+//            category.isSelected.toggle()
         } label: {
             HStack {
                 Image(systemName: buttonSymbol())
@@ -22,7 +22,7 @@ struct CategoryButton: View {
                     .fontWeight(.bold)
                     .foregroundStyle(textColor())
                 
-                Text(category.title.capitalized)
+                Text(category!.title.capitalized)
                     .font(.subheadline)
                     .fontWeight(.bold)
                     .foregroundStyle(textColor())
@@ -39,21 +39,21 @@ struct CategoryButton: View {
     }
     
     func backgroundColor() -> Color {
-        if category.isSelected {
+        if category!.isSelected {
             return .quentão
         }
         return .opala
     }
     
     func textColor() -> Color {
-        if category.isSelected {
+        if category!.isSelected {
             return .opala
         }
         return .quentão
     }
     
     func buttonSymbol() -> String {
-        if category.isSelected {
+        if category!.isSelected {
             return "checkmark.square.fill"
         }
         return "square"
@@ -62,10 +62,10 @@ struct CategoryButton: View {
 
 #Preview {
     VStack {
-        CategoryButton(category: Category(title: "teste", symbol: "house", isSelected: false)) {
+        CategoryButton(category: .constant(Category(title: "teste", symbol: "house", isSelected: false))) {
             print("a")
         }
-        CategoryButton(category: Category(title: "teste", symbol: "house", isSelected: true)) {
+        CategoryButton(category: .constant(Category(title: "teste", symbol: "house", isSelected: true))) {
             print("b")
         }
     }

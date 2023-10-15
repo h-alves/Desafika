@@ -29,9 +29,9 @@ struct HomeView: View {
             // Categorias
             VStack {
                 ForEach(viewModel.list, id: \.title) { category in
-                    CategoryButton(category: category) {
+                    CategoryButton(category: viewModel.getBinding(category: category)) {
                         viewModel.selectCategory(category: category)
-                        print(category.isSelected)
+//                        print(category.isSelected)
                     }
                 }
             }
@@ -51,6 +51,7 @@ struct HomeView: View {
                 // Componente de botão
                 HomeButton(activated: viewModel.buttonActivated) {
                     print(viewModel.list)
+                    print(CategoryDataModel.shared.list)
                 }
                 
                 Text("Gerar desafio")
