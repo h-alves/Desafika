@@ -12,6 +12,16 @@ struct ChallengeView: View {
     
     var body: some View {
         VStack {
+            if viewModel.noChallenge {
+                NoChallengeView()
+            } else {
+                challengeView
+            }
+        }
+    }
+    
+    var challengeView: some View {
+        VStack {
             Spacer()
             
             // Desafio & Botões

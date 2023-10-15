@@ -12,6 +12,7 @@ class ChallengeViewModel: ObservableObject {
     @Published var categoryFilter: [Category] = CategoryDataModel.shared.list.filter { c in
         return c.isSelected == true
     }
+    @Published var noChallenge: Bool = false
     @Published var places: [Place] = []
     
     func getRandomChallenge() {
@@ -21,11 +22,15 @@ class ChallengeViewModel: ObservableObject {
             }) && c.progress == .none
         }
         
-        var newChallenge = challengeFilter.randomElement()!
-        while newChallenge == challenge {
-            newChallenge = challengeFilter.randomElement()!
+        if challengeFilter == [] {
+            noChallenge = true
+        } else {
+            var newChallenge = challengeFilter.randomElement()!
+            while newChallenge == challenge {
+                newChallenge = challengeFilter.randomElement()!
+            }
+            challenge = newChallenge
         }
-        challenge = newChallenge
     }
     
     func acceptChallenge() {
