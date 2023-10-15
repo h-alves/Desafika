@@ -100,10 +100,10 @@ struct ChallengeView: View {
                     }
                     
                     ScrollView(.horizontal) {
-                        HStack {
+                        HStack(spacing: 16) {
                             // Placeholder
-                            ForEach(1...10, id: \.self) { _ in
-                                Text("teste")
+                            ForEach(viewModel.places, id: \.name) { place in
+                                PlaceCard(place: place)
                             }
                         }
                         .padding(.horizontal, 32)
@@ -120,6 +120,7 @@ struct ChallengeView: View {
         .background(.opala)
         .onAppear {
             viewModel.getRandomChallenge()
+            viewModel.loadPlaces()
         }
     }
 }

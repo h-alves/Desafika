@@ -12,6 +12,7 @@ class ChallengeViewModel: ObservableObject {
     @Published var categoryFilter: [Category] = CategoryDataModel.shared.list.filter { c in
         return c.isSelected == true
     }
+    @Published var places: [Place] = []
     
     func getRandomChallenge() {
         let challengeFilter = ChallengeDataModel.shared.list.filter { c in
@@ -33,5 +34,13 @@ class ChallengeViewModel: ObservableObject {
         }
         
         ChallengeDataModel.shared.list[index!].progress = .inProgress
+    }
+    
+    func loadPlaces() {
+        places.append(Place(name: "teste 1", category: "Restaurante", price: 1, review: 2.5, distance: 3.7))
+        places.append(Place(name: "teste 2", category: "Restaurante", price: 1, review: 2.5, distance: 3.7))
+        places.append(Place(name: "teste 3", category: "Restaurante", price: 1, review: 2.5, distance: 3.7))
+        places.append(Place(name: "teste 4", category: "Restaurante", price: 1, review: 2.5, distance: 3.7))
+        places.append(Place(name: "teste 5", category: "Restaurante", price: 1, review: 2.5, distance: 3.7))
     }
 }
