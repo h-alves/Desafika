@@ -34,6 +34,10 @@ struct HomeView: View {
 //                        print(category.isSelected)
                     }
                 }
+                
+                CategoryButton(category: viewModel.getBinding(category: Category.all)) {
+                    viewModel.toggleAll()
+                }
             }
             
             // Raio de distância

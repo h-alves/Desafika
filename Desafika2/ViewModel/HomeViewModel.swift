@@ -21,8 +21,15 @@ class HomeViewModel: ObservableObject {
         }
         
         CategoryDataModel.shared.list[index!].isSelected.toggle()
+        
         updateList()
         toggleButton()
+        
+        if allClicked() {
+            Category.all.isSelected = true
+        } else {
+            Category.all.isSelected = false
+        }
     }
     
     func toggleButton() {
@@ -40,14 +47,43 @@ class HomeViewModel: ObservableObject {
             category
         } set: { v in
             if let v {
-//                let index = dataDesafios.desafios.firstIndex(of: desafio)!
-//                dataDesafios.desafios[index] = v
                 let index = CategoryDataModel.shared.list.firstIndex(of: category)!
                 CategoryDataModel.shared.list[index] = v
             }
         }
         
         return b
+    }
+    
+    func toggleAll() {
+        if allClicked() {
+            for c in CategoryDataModel.shared.list {
+                let index = CategoryDataModel.shared.list.firstIndex(of: c)
+                CategoryDataModel.shared.list[index!].isSelected = false
+            }
+            
+            Category.all.isSelected = false
+        } else {
+            for c in CategoryDataModel.shared.list {
+                let index = CategoryDataModel.shared.list.firstIndex(of: c)
+                CategoryDataModel.shared.list[index!].isSelected = true
+            }
+            
+            Category.all.isSelected = true
+        }
+        
+        updateList()
+        toggleButton()
+    }
+    
+    func allClicked() -> Bool {
+        for c in CategoryDataModel.shared.list {
+            if c.isSelected == false {
+                return false
+            }
+        }
+        
+        return true
     }
     
 }
