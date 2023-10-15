@@ -5,17 +5,28 @@
 //  Created by Henrique Semmer on 12/10/23.
 //
 
-import Foundation
+import SwiftUI
 
 class ChallengeViewModel: ObservableObject {
     @Published var challenge: Challenge = ChallengeDataModel.shared.list[0]
+    @Published var categoryFilter: [Category] = CategoryDataModel.shared.list.filter { c in
+        return c.isSelected == true
+    }
     
     func getRandomChallenge() {
-        let challengeProgress = ChallengeDataModel.shared.list.filter { c in
-            return c.progress == .none
+        let challengeFilter = ChallengeDataModel.shared.list.filter { c in
+            return categoryFilter.contains(where: { category in
+                category.self == c.category
+            }) && c.progress == .none
         }
         
-        challenge = challengeProgress.randomElement()!
+        var newChallenge = challengeFilter.randomElement()!
+        print(newChallenge)
+        while newChallenge == challenge {
+            newChallenge = challengeFilter.randomElement()!
+            print(newChallenge)
+        }
+        challenge = newChallenge
     }
     
     func acceptChallenge() {
