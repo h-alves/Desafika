@@ -14,10 +14,10 @@ struct Category: Equatable {
     
     static var house = Category(title: "Casa", symbol: "house.fill", isSelected: true)
     static var park = Category(title: "Parque", symbol: "tree.fill", isSelected: true)
-    static var museum = Category(title: "Museu", symbol: "building.columns.fill", isSelected: false)
-    static var restaurant = Category(title: "Restaurante", symbol: "fork.knife", isSelected: false)
     static var ambient = Category(title: "Ambiente Público", symbol: "building.2.fill", isSelected: false)
     static var movie = Category(title: "Cinema", symbol: "popcorn.fill", isSelected: false)
+    static var restaurant = Category(title: "Restaurante", symbol: "fork.knife", isSelected: false)
+    static var museum = Category(title: "Museu", symbol: "building.columns.fill", isSelected: false)
     
     static var all = Category(title: "Todos", symbol: "", isSelected: false)
 }

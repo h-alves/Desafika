@@ -11,11 +11,11 @@ class CategoryDataModel {
     static let shared = CategoryDataModel()
     
     var list: [Category] = [
-        Category.ambient,
         Category.house,
-        Category.movie,
-        Category.museum,
         Category.park,
+        Category.museum,
+        Category.movie,
+        Category.ambient,
         Category.restaurant
     ]
 }

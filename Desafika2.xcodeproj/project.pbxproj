@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7842D7B02ADC75170029A359 /* FlexStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7842D7AF2ADC75170029A359 /* FlexStack.swift */; };
 		785207E32AD873A200F1DE3C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785207E22AD873A200F1DE3C /* Category.swift */; };
 		785207E52AD873D700F1DE3C /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785207E42AD873D700F1DE3C /* Challenge.swift */; };
 		785207E72AD8741B00F1DE3C /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785207E62AD8741B00F1DE3C /* Progress.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7842D7AF2ADC75170029A359 /* FlexStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexStack.swift; sourceTree = "<group>"; };
 		785207E22AD873A200F1DE3C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		785207E42AD873D700F1DE3C /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		785207E62AD8741B00F1DE3C /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
@@ -66,6 +68,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7842D7AE2ADC74FA0029A359 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7842D7AF2ADC75170029A359 /* FlexStack.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		785207DE2AD8735600F1DE3C /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +146,7 @@
 				785207DF2AD8735B00F1DE3C /* View */,
 				785207E02AD8736200F1DE3C /* ViewModel */,
 				785207DE2AD8735600F1DE3C /* Model */,
+				7842D7AE2ADC74FA0029A359 /* Utils */,
 				78D91BD02AD87308007B88C4 /* Assets.xcassets */,
 				78D91BD22AD87308007B88C4 /* Preview Content */,
 			);
@@ -223,6 +234,7 @@
 				786CED002AD9DBB50069ACF0 /* SavedCard.swift in Sources */,
 				785208012AD8DFC000F1DE3C /* ChallengeCard.swift in Sources */,
 				786CED042AD9EBA40069ACF0 /* CategoryButton.swift in Sources */,
+				7842D7B02ADC75170029A359 /* FlexStack.swift in Sources */,
 				78D91BCF2AD87306007B88C4 /* ContentView.swift in Sources */,
 				785207E72AD8741B00F1DE3C /* Progress.swift in Sources */,
 				785208032AD8E1B600F1DE3C /* ChallengeDataModel.swift in Sources */,

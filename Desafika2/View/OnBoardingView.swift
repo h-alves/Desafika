@@ -10,6 +10,7 @@ import SwiftUI
 struct OnBoardingView: View {
     var body: some View {
         VStack(spacing: 200) {
+            
             // Textos
             VStack(spacing: 36) {
                 Text("Bem vindo(a)!")
@@ -18,6 +19,8 @@ struct OnBoardingView: View {
                     .foregroundStyle(.meiaNoite)
                 
                 VStack(spacing: 16) {
+                    
+                    // Texto 1
                     HStack {
                         Image(systemName: "sparkles")
                             .font(.largeTitle)
@@ -37,6 +40,7 @@ struct OnBoardingView: View {
                         }
                     }
                     
+                    // Texto 2
                     HStack {
                         Image(systemName: "building.2.crop.circle.fill")
                             .font(.largeTitle)
@@ -56,6 +60,7 @@ struct OnBoardingView: View {
                         }
                     }
                     
+                    // Texto 3
                     HStack {
                         Image(systemName: "bookmark.circle.fill")
                             .font(.largeTitle)

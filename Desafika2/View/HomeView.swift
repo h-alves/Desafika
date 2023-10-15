@@ -12,6 +12,7 @@ struct HomeView: View {
     
     var body: some View {
         VStack(spacing: 28) {
+            
             // Texto
             VStack(spacing: 8) {
                 Text("Prontos para um novo desafio?")
@@ -31,7 +32,6 @@ struct HomeView: View {
                 ForEach(viewModel.list, id: \.title) { category in
                     CategoryButton(category: viewModel.getBinding(category: category)) {
                         viewModel.selectCategory(category: category)
-//                        print(category.isSelected)
                     }
                 }
                 
@@ -54,8 +54,7 @@ struct HomeView: View {
             VStack(spacing: 12) {
                 // Componente de botão
                 HomeButton(activated: viewModel.buttonActivated) {
-                    print(viewModel.list)
-                    print(CategoryDataModel.shared.list)
+                    
                 }
                 
                 Text("Gerar desafio")
@@ -68,6 +67,9 @@ struct HomeView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(.horizontal, 32)
         .background(.opala)
+        .onAppear {
+            viewModel.toggleButton()
+        }
     }
 }
 
