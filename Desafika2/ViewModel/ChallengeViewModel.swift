@@ -21,10 +21,8 @@ class ChallengeViewModel: ObservableObject {
         }
         
         var newChallenge = challengeFilter.randomElement()!
-        print(newChallenge)
         while newChallenge == challenge {
             newChallenge = challengeFilter.randomElement()!
-            print(newChallenge)
         }
         challenge = newChallenge
     }

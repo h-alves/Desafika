@@ -38,10 +38,10 @@ struct ChallengeView: View {
                         Button {
                             viewModel.acceptChallenge()
                         } label: {
-                            Text("aceitar")
+                            Image("accept")
                         }
                         
-                        Text("Aceito")
+                        Text("Salvar")
                             .font(.footnote)
                             .fontWeight(.bold)
                             .foregroundStyle(.meiaNoite)
@@ -57,7 +57,7 @@ struct ChallengeView: View {
                         Button {
                             viewModel.getRandomChallenge()
                         } label: {
-                            Text("outro")
+                            Image("other")
                         }
                         
                         Text("Outro")
@@ -72,7 +72,7 @@ struct ChallengeView: View {
             Spacer()
             
             // Lugares
-            VStack {
+            VStack(spacing: 24) {
                 if viewModel.challenge.category == Category.house {
                     HStack(spacing: 16) {
                         Image("home")

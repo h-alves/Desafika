@@ -20,10 +20,12 @@ struct ChallengeCard: View {
                 Text(challenge.category.title.capitalized)
                     .font(.caption2)
             }
+            .opacity(0.6)
         }
         .font(.callout)
         .fontWeight(.bold)
         .foregroundStyle(.chiclete)
+        .frame(maxWidth: .infinity)
         .padding(22)
         .multilineTextAlignment(.center)
         .background(.white)

@@ -28,7 +28,7 @@ struct HomeView: View {
             .frame(maxWidth: 300)
             
             // Categorias
-            VStack {
+            FlexStack {
                 ForEach(viewModel.list, id: \.title) { category in
                     CategoryButton(category: viewModel.getBinding(category: category)) {
                         viewModel.selectCategory(category: category)
