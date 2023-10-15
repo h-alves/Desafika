@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7842D7B02ADC75170029A359 /* FlexStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7842D7AF2ADC75170029A359 /* FlexStack.swift */; };
+		7842D7B22ADC7E270029A359 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7842D7B12ADC7E270029A359 /* Place.swift */; };
+		7842D7B42ADC7F000029A359 /* PlaceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7842D7B32ADC7F000029A359 /* PlaceCard.swift */; };
 		785207E32AD873A200F1DE3C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785207E22AD873A200F1DE3C /* Category.swift */; };
 		785207E52AD873D700F1DE3C /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785207E42AD873D700F1DE3C /* Challenge.swift */; };
 		785207E72AD8741B00F1DE3C /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785207E62AD8741B00F1DE3C /* Progress.swift */; };
@@ -33,6 +35,8 @@
 
 /* Begin PBXFileReference section */
 		7842D7AF2ADC75170029A359 /* FlexStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexStack.swift; sourceTree = "<group>"; };
+		7842D7B12ADC7E270029A359 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		7842D7B32ADC7F000029A359 /* PlaceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCard.swift; sourceTree = "<group>"; };
 		785207E22AD873A200F1DE3C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		785207E42AD873D700F1DE3C /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		785207E62AD8741B00F1DE3C /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
@@ -84,6 +88,7 @@
 				785207E42AD873D700F1DE3C /* Challenge.swift */,
 				785208022AD8E1B600F1DE3C /* ChallengeDataModel.swift */,
 				785207E62AD8741B00F1DE3C /* Progress.swift */,
+				7842D7B12ADC7E270029A359 /* Place.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 				785208002AD8DFC000F1DE3C /* ChallengeCard.swift */,
 				786CECFF2AD9DBB50069ACF0 /* SavedCard.swift */,
 				786CED032AD9EBA40069ACF0 /* CategoryButton.swift */,
+				7842D7B32ADC7F000029A359 /* PlaceCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -240,9 +246,11 @@
 				785208032AD8E1B600F1DE3C /* ChallengeDataModel.swift in Sources */,
 				785207E52AD873D700F1DE3C /* Challenge.swift in Sources */,
 				785207FC2AD8DB9A00F1DE3C /* HomeViewModel.swift in Sources */,
+				7842D7B42ADC7F000029A359 /* PlaceCard.swift in Sources */,
 				785207EF2AD876B700F1DE3C /* OnBoardingView.swift in Sources */,
 				785207E92AD8745100F1DE3C /* HomeView.swift in Sources */,
 				785207ED2AD8769800F1DE3C /* ChallengeView.swift in Sources */,
+				7842D7B22ADC7E270029A359 /* Place.swift in Sources */,
 				786CED022AD9E4EC0069ACF0 /* HomeButton.swift in Sources */,
 				785208052AD8E1C300F1DE3C /* CategoryDataModel.swift in Sources */,
 				785207F12AD876C500F1DE3C /* SavedView.swift in Sources */,
