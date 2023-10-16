@@ -73,8 +73,20 @@ struct PlaceCard: View {
 
 #Preview {
     VStack {
-        PlaceCard(place: Place(name: "Nome", category: "Parque", price: 2, review: 4.5, distance: 5.9832))
+        ScrollView(.horizontal) {
+            HStack {
+                PlaceCard(place: Place(name: "Teste 1", category: "Parque", price: 2, review: 4.5, distance: 5.5632))
+                PlaceCard(place: Place(name: "Teste 2", category: "Parque", price: 0, review: 1, distance: 2))
+                PlaceCard(place: Place(name: "Teste 3", category: "", price: 2, review: 4.5, distance: 7.7))
+                PlaceCard(place: Place(name: "Teste 4", category: "", price: 0, review: 5, distance: 1.54232324))
+                PlaceCard(place: Place(name: "Teste 5", category: "Parque", price: 2, review: 0, distance: 22))
+            }
+            .padding(.horizontal, 32)
+        }
+        .padding(.horizontal, -32)
+        .scrollIndicators(.hidden)
     }
+    .padding(32)
     .frame(maxWidth: .infinity, maxHeight: .infinity)
     .background(.opala)
 }

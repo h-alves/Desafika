@@ -69,4 +69,6 @@ struct CategoryButton: View {
             print("b")
         }
     }
+    .frame(maxWidth: .infinity, maxHeight: .infinity)
+    .background(.opala)
 }

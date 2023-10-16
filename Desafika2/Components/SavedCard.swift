@@ -55,7 +55,15 @@ struct SavedCard: View {
 }
 
 #Preview {
-    SavedCard(challenge: Challenge(description: "Teste muito longo mesmo pra testar se fica gigante o texto na tela, vamo ver!", category: Category.ambient, progress: Progress.finished)) {
-        print("teste")
+    VStack {
+        SavedCard(challenge: Challenge(description: "Teste muito longo mesmo pra testar se fica gigante o texto na tela, vamo ver!", category: Category.ambient, progress: Progress.inProgress)) {
+            print("teste")
+        }
+        
+        SavedCard(challenge: Challenge(description: "Teste muito longo mesmo pra testar se fica gigante o texto na tela, vamo ver!", category: Category.ambient, progress: Progress.finished)) {
+            print("teste 2")
+        }
     }
+    .frame(maxWidth: .infinity, maxHeight: .infinity)
+    .background(.opala)
 }

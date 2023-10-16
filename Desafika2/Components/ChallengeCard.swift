@@ -34,9 +34,11 @@ struct ChallengeCard: View {
 }
 
 #Preview {
-    VStack {
+    VStack(spacing: 24) {
         ChallengeCard(challenge: Challenge(description: "Desafio 1", category: Category.house, progress: Progress.none))
+        ChallengeCard(challenge: Challenge(description: "Planejem um dia de \"relembrar a infância\", jogando jogos de videogame antigos, assistindo a desenhos animados clássicos e fazendo lanches favoritos da época.", category: Category.movie, progress: Progress.none))
     }
+    .padding(32)
     .frame(maxWidth: .infinity, maxHeight: .infinity)
     .background(.opala)
 }
