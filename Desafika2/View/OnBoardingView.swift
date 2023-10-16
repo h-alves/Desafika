@@ -11,7 +11,7 @@ struct OnBoardingView: View {
     var body: some View {
         VStack(spacing: 200) {
             
-            // Textos
+            /// Textos
             VStack(spacing: 36) {
                 Text("Bem vindo(a)!")
                     .font(.largeTitle)
@@ -20,7 +20,7 @@ struct OnBoardingView: View {
                 
                 VStack(spacing: 16) {
                     
-                    // Texto 1
+                    /// Texto 1
                     HStack {
                         Image(systemName: "sparkles")
                             .font(.largeTitle)
@@ -40,7 +40,7 @@ struct OnBoardingView: View {
                         }
                     }
                     
-                    // Texto 2
+                    /// Texto 2
                     HStack {
                         Image(systemName: "building.2.crop.circle.fill")
                             .font(.largeTitle)
@@ -60,7 +60,7 @@ struct OnBoardingView: View {
                         }
                     }
                     
-                    // Texto 3
+                    /// Texto 3
                     HStack {
                         Image(systemName: "bookmark.circle.fill")
                             .font(.largeTitle)
@@ -82,7 +82,7 @@ struct OnBoardingView: View {
                 }
             }
             
-            // Botão
+            /// Botão
             Button {
                print("a")
             } label: {

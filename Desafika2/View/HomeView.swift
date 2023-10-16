@@ -13,7 +13,7 @@ struct HomeView: View {
     var body: some View {
         VStack(spacing: 28) {
             
-            // Texto
+            /// Texto
             VStack(spacing: 8) {
                 Text("Prontos para um novo desafio?")
                     .font(.largeTitle)
@@ -27,7 +27,7 @@ struct HomeView: View {
             }
             .frame(maxWidth: 300)
             
-            // Categorias
+            /// Categorias (Versão Dinâmica)
             FlexStack {
                 ForEach(viewModel.list, id: \.title) { category in
                     CategoryButton(category: viewModel.getBinding(category: category)) {
@@ -40,7 +40,40 @@ struct HomeView: View {
                 }
             }
             
-            // Raio de distância
+            /// Categorias (Versão Estática)
+//            VStack {
+//                HStack {
+//                    CategoryButton(category: viewModel.getBinding(category: viewModel.list[0])) {
+//                        viewModel.selectCategory(category: viewModel.list[0])
+//                    }
+//                    CategoryButton(category: viewModel.getBinding(category: viewModel.list[1])) {
+//                        viewModel.selectCategory(category: viewModel.list[1])
+//                    }
+//                    CategoryButton(category: viewModel.getBinding(category: viewModel.list[2])) {
+//                        viewModel.selectCategory(category: viewModel.list[2])
+//                    }
+//                }
+//                
+//                HStack {
+//                    CategoryButton(category: viewModel.getBinding(category: viewModel.list[3])) {
+//                        viewModel.selectCategory(category: viewModel.list[3])
+//                    }
+//                    CategoryButton(category: viewModel.getBinding(category: viewModel.list[4])) {
+//                        viewModel.selectCategory(category: viewModel.list[4])
+//                    }
+//                }
+//                
+//                HStack {
+//                    CategoryButton(category: viewModel.getBinding(category: viewModel.list[5])) {
+//                        viewModel.selectCategory(category: viewModel.list[5])
+//                    }
+//                    CategoryButton(category: viewModel.getBinding(category: Category.all)) {
+//                        viewModel.toggleAll()
+//                    }
+//                }
+//            }
+            
+            /// Raio de distância
             VStack {
                 Text("Sugerir lugares em um raio de:")
                     .font(.footnote)
@@ -50,11 +83,10 @@ struct HomeView: View {
                 // Slider
             }
             
-            // Botão
+            /// Botão
             VStack(spacing: 12) {
-                // Componente de botão
                 HomeButton(activated: viewModel.buttonActivated) {
-                    
+                    // Ir para a Challenge View
                 }
                 
                 Text("Gerar desafio")

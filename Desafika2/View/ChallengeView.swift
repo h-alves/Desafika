@@ -24,7 +24,7 @@ struct ChallengeView: View {
         VStack {
             Spacer()
             
-            // Desafio & Botões
+            /// Desafio & Botões
             VStack(spacing: 24) {
                 VStack(spacing: 16) {
                     VStack {
@@ -38,13 +38,12 @@ struct ChallengeView: View {
                             .foregroundStyle(.meiaNoite)
                     }
                     
-                    // Componente de Desafio
                     ChallengeCard(challenge: viewModel.challenge)
                 }
                 
+                /// Botões
                 HStack(alignment: .top, spacing: 16) {
                     VStack {
-                        // Botão de Aceitar Desafio
                         Button {
                             viewModel.acceptChallenge()
                         } label: {
@@ -63,7 +62,6 @@ struct ChallengeView: View {
                         .foregroundStyle(.chiclete)
                     
                     VStack {
-                        // Botão de Mudar Desafio
                         Button {
                             viewModel.getRandomChallenge()
                         } label: {
@@ -81,7 +79,7 @@ struct ChallengeView: View {
             
             Spacer()
             
-            // Lugares
+            /// Lugares
             VStack(spacing: 24) {
                 if viewModel.challenge.category == Category.house {
                     HStack(spacing: 16) {
@@ -97,7 +95,6 @@ struct ChallengeView: View {
                     }
                 } else {
                     HStack(spacing: 16) {
-                        // Imagem do Casalzinho
                         Image("coupleLove")
                             .resizable()
                             .frame(width: 80, height: 42.22)
@@ -111,7 +108,6 @@ struct ChallengeView: View {
                     
                     ScrollView(.horizontal) {
                         HStack(spacing: 16) {
-                            // Placeholder
                             ForEach(viewModel.places, id: \.name) { place in
                                 PlaceCard(place: place)
                             }

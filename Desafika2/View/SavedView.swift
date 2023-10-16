@@ -15,7 +15,7 @@ struct SavedView: View {
             VStack(spacing: 32) {
                 Spacer()
                 
-                // Em Progresso
+                /// Em Progresso
                 VStack(spacing: 16) {
                     VStack(spacing: 12) {
                         Image("coupleLove")
@@ -37,7 +37,7 @@ struct SavedView: View {
                     }
                 }
                 
-                // Concluídos
+                /// Concluídos
                 VStack(spacing: 12) {
                     Text("Concluídos")
                         .font(.callout)
