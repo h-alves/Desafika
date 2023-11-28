@@ -32,6 +32,10 @@
 		78D91BCF2AD87306007B88C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D91BCE2AD87306007B88C4 /* ContentView.swift */; };
 		78D91BD12AD87308007B88C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78D91BD02AD87308007B88C4 /* Assets.xcassets */; };
 		78D91BD42AD87308007B88C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78D91BD32AD87308007B88C4 /* Preview Assets.xcassets */; };
+		8CE0EF452B166805008F5319 /* RouterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0EF442B166805008F5319 /* RouterService.swift */; };
+		8CE0EF4A2B167207008F5319 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0EF492B167207008F5319 /* SplashView.swift */; };
+		8CE0EF4C2B167299008F5319 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0EF4B2B167299008F5319 /* StorageService.swift */; };
+		8CE0EF4F2B167316008F5319 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0EF4E2B167316008F5319 /* Duration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +65,10 @@
 		78D91BCE2AD87306007B88C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		78D91BD02AD87308007B88C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78D91BD32AD87308007B88C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8CE0EF442B166805008F5319 /* RouterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterService.swift; sourceTree = "<group>"; };
+		8CE0EF492B167207008F5319 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		8CE0EF4B2B167299008F5319 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		8CE0EF4E2B167316008F5319 /* Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				7842D7AF2ADC75170029A359 /* FlexStack.swift */,
+				8CE0EF4E2B167316008F5319 /* Duration.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -98,6 +107,7 @@
 		785207DF2AD8735B00F1DE3C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8CE0EF492B167207008F5319 /* SplashView.swift */,
 				785207EE2AD876B700F1DE3C /* OnboardingView.swift */,
 				785207E82AD8745100F1DE3C /* HomeView.swift */,
 				785207EA2AD8768E00F1DE3C /* NoChallengeView.swift */,
@@ -152,6 +162,7 @@
 				78D91BCC2AD87306007B88C4 /* DesafikaApp.swift */,
 				78D91BCE2AD87306007B88C4 /* ContentView.swift */,
 				785207FF2AD8DF7000F1DE3C /* Components */,
+				8CE0EF462B166812008F5319 /* Services */,
 				785207DF2AD8735B00F1DE3C /* View */,
 				785207E02AD8736200F1DE3C /* ViewModel */,
 				785207DE2AD8735600F1DE3C /* Model */,
@@ -168,6 +179,15 @@
 				78D91BD32AD87308007B88C4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8CE0EF462B166812008F5319 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8CE0EF442B166805008F5319 /* RouterService.swift */,
+				8CE0EF4B2B167299008F5319 /* StorageService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,12 +262,16 @@
 			files = (
 				786CED002AD9DBB50069ACF0 /* SavedCard.swift in Sources */,
 				785208012AD8DFC000F1DE3C /* ChallengeCard.swift in Sources */,
+				8CE0EF4A2B167207008F5319 /* SplashView.swift in Sources */,
 				786CED042AD9EBA40069ACF0 /* CategoryButton.swift in Sources */,
 				7842D7B02ADC75170029A359 /* FlexStack.swift in Sources */,
 				78D91BCF2AD87306007B88C4 /* ContentView.swift in Sources */,
+				8CE0EF4F2B167316008F5319 /* Duration.swift in Sources */,
 				785207E72AD8741B00F1DE3C /* Progress.swift in Sources */,
+				8CE0EF4C2B167299008F5319 /* StorageService.swift in Sources */,
 				785208032AD8E1B600F1DE3C /* ChallengeDataSource.swift in Sources */,
 				785207E52AD873D700F1DE3C /* Challenge.swift in Sources */,
+				8CE0EF452B166805008F5319 /* RouterService.swift in Sources */,
 				785207FC2AD8DB9A00F1DE3C /* HomeViewModel.swift in Sources */,
 				7842D7B42ADC7F000029A359 /* PlaceCard.swift in Sources */,
 				785207EF2AD876B700F1DE3C /* OnboardingView.swift in Sources */,
