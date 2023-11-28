@@ -31,7 +31,7 @@ struct CategoryButton: View {
             .padding(.vertical, 8)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .stroke(.quentão, lineWidth: 4)
+                    .stroke(.quentão, lineWidth: 4)
             )
             .background(backgroundColor())
             .clipShape(RoundedRectangle(cornerRadius: 10))
@@ -40,7 +40,7 @@ struct CategoryButton: View {
     
     func backgroundColor() -> Color {
         if category!.isSelected {
-            return .quentão
+            return .quentão
         }
         return .opala
     }
@@ -49,7 +49,7 @@ struct CategoryButton: View {
         if category!.isSelected {
             return .opala
         }
-        return .quentão
+        return .quentão
     }
     
     func buttonSymbol() -> String {

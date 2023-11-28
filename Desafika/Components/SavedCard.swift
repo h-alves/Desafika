@@ -34,7 +34,7 @@ struct SavedCard: View {
     
     func backgroundColor() -> Color {
         if challenge.progress == .inProgress {
-            return .quentão
+            return .quentão
         }
         return .white
     }

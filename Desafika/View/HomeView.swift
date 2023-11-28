@@ -12,6 +12,7 @@ struct HomeView: View {
     
     var body: some View {
         VStack(spacing: 28) {
+            Spacer()
             
             /// Texto
             VStack(spacing: 8) {
@@ -74,14 +75,16 @@ struct HomeView: View {
             }
             
             /// Raio de distância
-            VStack {
-                Text("Sugerir lugares em um raio de:")
-                    .font(.footnote)
-                    .foregroundStyle(.meiaNoite)
-                    .opacity(0.5)
-                
-                // Slider
-            }
+//            VStack {
+//                Text("Sugerir lugares em um raio de:")
+//                    .font(.footnote)
+//                    .foregroundStyle(.meiaNoite)
+//                    .opacity(0.5)
+//                
+//                // Slider
+//            }
+            
+            Spacer()
             
             /// Botão
             VStack(spacing: 12) {
@@ -95,6 +98,8 @@ struct HomeView: View {
                     .foregroundStyle(.meiaNoite)
                     .opacity(0.5)
             }
+            
+            Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(.horizontal, 32)

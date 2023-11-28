@@ -92,7 +92,7 @@ struct OnBoardingView: View {
                     .foregroundStyle(.white)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 16)
-                    .background(.quentão)
+                    .background(.quentão)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
             }
             

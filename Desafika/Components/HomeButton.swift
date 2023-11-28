@@ -30,7 +30,7 @@ struct HomeButton: View {
     
     func buttonColor() -> Color {
         if activated {
-            return .quentão
+            return .quentão
         }
         return .meiaNoite
     }
