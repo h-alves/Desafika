@@ -6,9 +6,25 @@
 //
 
 import Foundation
+import Combine
 
 class SavedViewModel: ObservableObject {
     @Published var filteredList: [Challenge] = []
+    
+    var bag = Set<AnyCancellable>()
+    
+    func subscribe() {
+        ChallengeDataSource.shared.$list.sink { challenges in
+            self.updateList()
+        }.store(in: &bag)
+    }
+    
+    func cancelSubscription() {
+        for item in bag {
+            item.cancel()
+        }
+        bag.removeAll()
+    }
     
     func updateList() {
         filteredList = ChallengeDataSource.shared.list.filter { c in
