@@ -8,15 +8,15 @@
 import SwiftUI
 
 class ChallengeViewModel: ObservableObject {
-    @Published var challenge: Challenge = ChallengeDataModel.shared.list[0]
-    @Published var categoryFilter: [Category] = CategoryDataModel.shared.list.filter { c in
+    @Published var challenge: Challenge = ChallengeDataSource.shared.list[0]
+    @Published var categoryFilter: [Category] = CategoryDataSource.shared.list.filter { c in
         return c.isSelected == true
     }
     @Published var noChallenge: Bool = false
     @Published var places: [Place] = []
     
     func getRandomChallenge() {
-        let challengeFilter = ChallengeDataModel.shared.list.filter { c in
+        let challengeFilter = ChallengeDataSource.shared.list.filter { c in
             return categoryFilter.contains(where: { category in
                 category.self == c.category
             }) && c.progress == .none
@@ -34,11 +34,11 @@ class ChallengeViewModel: ObservableObject {
     }
     
     func acceptChallenge() {
-        let index = ChallengeDataModel.shared.list.firstIndex { c in
+        let index = ChallengeDataSource.shared.list.firstIndex { c in
             c.self == challenge.self
         }
         
-        ChallengeDataModel.shared.list[index!].progress = .inProgress
+        ChallengeDataSource.shared.list[index!].progress = .inProgress
     }
     
     func loadPlaces() {

@@ -62,7 +62,10 @@ struct SavedView: View {
         .background(.opala)
         .scrollIndicators(.hidden)
         .onAppear {
-            viewModel.updateList()
+            viewModel.subscribe()
+        }
+        .onDisappear {
+            viewModel.cancelSubscription()
         }
     }
 }
