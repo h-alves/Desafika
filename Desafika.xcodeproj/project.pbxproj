@@ -110,10 +110,10 @@
 		785207E02AD8736200F1DE3C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				78B15AE92B1661DA00E99527 /* OnboardingViewModel.swift */,
 				785207FB2AD8DB9A00F1DE3C /* HomeViewModel.swift */,
 				785207FD2AD8DE1900F1DE3C /* ChallengeViewModel.swift */,
 				786CECFD2AD9D8E60069ACF0 /* SavedViewModel.swift */,
-				78B15AE92B1661DA00E99527 /* OnboardingViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";

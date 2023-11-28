@@ -15,6 +15,8 @@ struct Challenge: Equatable {
     let description: String
     let category: Category
     var progress: Progress
+    
+    static var test = Challenge(description: "teste", category: .ambient, progress: .none)
 }
 
 extension Challenge: Codable {

@@ -8,7 +8,7 @@
 import SwiftUI
 
 class ChallengeViewModel: ObservableObject {
-    @Published var challenge: Challenge = ChallengeDataSource.shared.list[0]
+    @Published var challenge: Challenge = Challenge.test
     @Published var categoryFilter: [Category] = CategoryDataSource.shared.list.filter { c in
         return c.isSelected == true
     }
