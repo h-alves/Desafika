@@ -21,3 +21,7 @@ struct Category: Equatable {
     
     static var all = Category(title: "Todos", symbol: "", isSelected: false)
 }
+
+extension Category: Codable {
+    
+}

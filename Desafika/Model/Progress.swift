@@ -7,6 +7,10 @@
 
 import Foundation
 
-enum Progress: CaseIterable {
+enum Progress: CaseIterable, Equatable {
     case none, inProgress, finished
+}
+
+extension Progress: Codable {
+    
 }
