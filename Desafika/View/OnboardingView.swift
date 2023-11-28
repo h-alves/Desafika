@@ -1,5 +1,5 @@
 //
-//  OnBoardingView.swift
+//  OnboardingView.swift
 //  Desafika
 //
 //  Created by Henrique Semmer on 12/10/23.
@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct OnBoardingView: View {
+struct OnboardingView: View {
+    @ObservedObject var viewModel = OnboardingViewModel()
+    
     var body: some View {
         VStack(spacing: 200) {
             
@@ -84,7 +86,8 @@ struct OnBoardingView: View {
             
             /// Botão
             Button {
-               // Ir para a Home View
+                viewModel.createList()
+                //Ir para a Home View
             } label: {
                 Text("Começar")
                     .font(.title3)
@@ -104,5 +107,5 @@ struct OnBoardingView: View {
 }
 
 #Preview {
-    OnBoardingView()
+    OnboardingView()
 }
