@@ -89,7 +89,9 @@ struct HomeView: View {
             /// Botão
             VStack(spacing: 12) {
                 HomeButton(activated: viewModel.buttonActivated) {
-                    // Ir para a Challenge View
+                    withAnimation() {
+                        RouterService.shared.navigate(.challenge)
+                    }
                 }
                 
                 Text("Gerar desafio")

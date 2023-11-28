@@ -46,8 +46,8 @@ struct ChallengeView: View {
                     VStack {
                         Button {
                             viewModel.acceptChallenge()
+                            RouterService.shared.navigate(.saved)
                             
-                            // Ir para a Saved View
                         } label: {
                             Image("accept")
                         }
@@ -127,9 +127,10 @@ struct ChallengeView: View {
         .padding(.horizontal, 32)
         .background(.opala)
         .onAppear {
-            viewModel.getRandomChallenge()
-            viewModel.loadPlaces()
+                viewModel.getRandomChallenge()
+                viewModel.loadPlaces()
         }
+       
     }
 }
 

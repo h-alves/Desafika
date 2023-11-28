@@ -86,8 +86,10 @@ struct OnboardingView: View {
             
             /// Botão
             Button {
-                viewModel.createList()
-                //Ir para a Home View
+                withAnimation(.linear) {
+                    viewModel.createList()
+                    RouterService.shared.navigate(.home)
+                }
             } label: {
                 Text("Começar")
                     .font(.title3)
