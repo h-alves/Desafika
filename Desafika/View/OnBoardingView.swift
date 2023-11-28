@@ -84,7 +84,7 @@ struct OnBoardingView: View {
             
             /// Botão
             Button {
-               print("a")
+               // Ir para a Home View
             } label: {
                 Text("Começar")
                     .font(.title3)

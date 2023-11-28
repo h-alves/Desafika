@@ -31,6 +31,8 @@ struct SavedView: View {
                     VStack(spacing: 12) {
                         ForEach(viewModel.inProgress(), id: \.description) { c in
                             SavedCard(challenge: c) {
+                                
+                            } secondayFunc: {
                                 viewModel.finishChallenge(challenge: c)
                             }
                         }
@@ -47,6 +49,8 @@ struct SavedView: View {
                     
                     ForEach(viewModel.finished(), id: \.description) { c in
                         SavedCard(challenge: c) {
+                            // Abrir o desafio em um popup
+                        } secondayFunc: {
                             viewModel.unfinishChallenge(challenge: c)
                         }
                     }

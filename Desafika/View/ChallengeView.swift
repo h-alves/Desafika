@@ -46,6 +46,8 @@ struct ChallengeView: View {
                     VStack {
                         Button {
                             viewModel.acceptChallenge()
+                            
+                            // Ir para a Saved View
                         } label: {
                             Image("accept")
                         }
