@@ -8,19 +8,19 @@
 import SwiftUI
 
 class HomeViewModel: ObservableObject {
-    @Published var list: [Category] = CategoryDataModel.shared.list
+    @Published var list: [Category] = CategoryDataSource.shared.list
     @Published var buttonActivated: Bool = false
     
     func updateList() {
-        list = CategoryDataModel.shared.list
+        list = CategoryDataSource.shared.list
     }
     
     func selectCategory(category: Category) {
-        let index = CategoryDataModel.shared.list.firstIndex { c in
+        let index = CategoryDataSource.shared.list.firstIndex { c in
             return c.title == category.title
         }
         
-        CategoryDataModel.shared.list[index!].isSelected.toggle()
+        CategoryDataSource.shared.list[index!].isSelected.toggle()
         
         updateList()
         toggleButton()
@@ -47,8 +47,8 @@ class HomeViewModel: ObservableObject {
             category
         } set: { v in
             if let v {
-                let index = CategoryDataModel.shared.list.firstIndex(of: category)!
-                CategoryDataModel.shared.list[index] = v
+                let index = CategoryDataSource.shared.list.firstIndex(of: category)!
+                CategoryDataSource.shared.list[index] = v
             }
         }
         
@@ -57,16 +57,16 @@ class HomeViewModel: ObservableObject {
     
     func toggleAll() {
         if allClicked() {
-            for c in CategoryDataModel.shared.list {
-                let index = CategoryDataModel.shared.list.firstIndex(of: c)
-                CategoryDataModel.shared.list[index!].isSelected = false
+            for c in CategoryDataSource.shared.list {
+                let index = CategoryDataSource.shared.list.firstIndex(of: c)
+                CategoryDataSource.shared.list[index!].isSelected = false
             }
             
             Category.all.isSelected = false
         } else {
-            for c in CategoryDataModel.shared.list {
-                let index = CategoryDataModel.shared.list.firstIndex(of: c)
-                CategoryDataModel.shared.list[index!].isSelected = true
+            for c in CategoryDataSource.shared.list {
+                let index = CategoryDataSource.shared.list.firstIndex(of: c)
+                CategoryDataSource.shared.list[index!].isSelected = true
             }
             
             Category.all.isSelected = true
@@ -77,7 +77,7 @@ class HomeViewModel: ObservableObject {
     }
     
     func allClicked() -> Bool {
-        for c in CategoryDataModel.shared.list {
+        for c in CategoryDataSource.shared.list {
             if c.isSelected == false {
                 return false
             }

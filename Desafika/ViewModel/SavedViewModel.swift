@@ -11,7 +11,7 @@ class SavedViewModel: ObservableObject {
     @Published var filteredList: [Challenge] = []
     
     func updateList() {
-        filteredList = ChallengeDataModel.shared.list.filter { c in
+        filteredList = ChallengeDataSource.shared.list.filter { c in
             return c.progress == .inProgress || c.progress == .finished
         }
     }
@@ -33,20 +33,20 @@ class SavedViewModel: ObservableObject {
     }
     
     func finishChallenge(challenge: Challenge) {
-        let index = ChallengeDataModel.shared.list.firstIndex { c in
+        let index = ChallengeDataSource.shared.list.firstIndex { c in
             return c.description == challenge.description
         }
         
-        ChallengeDataModel.shared.list[index!].progress = .finished
+        ChallengeDataSource.shared.list[index!].progress = .finished
         updateList()
     }
     
     func unfinishChallenge(challenge: Challenge) {
-        let index = ChallengeDataModel.shared.list.firstIndex { c in
+        let index = ChallengeDataSource.shared.list.firstIndex { c in
             return c.description == challenge.description
         }
         
-        ChallengeDataModel.shared.list[index!].progress = .inProgress
+        ChallengeDataSource.shared.list[index!].progress = .inProgress
         updateList()
     }
 }

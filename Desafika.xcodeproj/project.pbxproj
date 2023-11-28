@@ -21,8 +21,8 @@
 		785207FC2AD8DB9A00F1DE3C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785207FB2AD8DB9A00F1DE3C /* HomeViewModel.swift */; };
 		785207FE2AD8DE1900F1DE3C /* ChallengeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785207FD2AD8DE1900F1DE3C /* ChallengeViewModel.swift */; };
 		785208012AD8DFC000F1DE3C /* ChallengeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785208002AD8DFC000F1DE3C /* ChallengeCard.swift */; };
-		785208032AD8E1B600F1DE3C /* ChallengeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785208022AD8E1B600F1DE3C /* ChallengeDataModel.swift */; };
-		785208052AD8E1C300F1DE3C /* CategoryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785208042AD8E1C300F1DE3C /* CategoryDataModel.swift */; };
+		785208032AD8E1B600F1DE3C /* ChallengeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785208022AD8E1B600F1DE3C /* ChallengeDataSource.swift */; };
+		785208052AD8E1C300F1DE3C /* CategoryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785208042AD8E1C300F1DE3C /* CategoryDataSource.swift */; };
 		786CECFE2AD9D8E60069ACF0 /* SavedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786CECFD2AD9D8E60069ACF0 /* SavedViewModel.swift */; };
 		786CED002AD9DBB50069ACF0 /* SavedCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786CECFF2AD9DBB50069ACF0 /* SavedCard.swift */; };
 		786CED022AD9E4EC0069ACF0 /* HomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786CED012AD9E4EC0069ACF0 /* HomeButton.swift */; };
@@ -48,8 +48,8 @@
 		785207FB2AD8DB9A00F1DE3C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		785207FD2AD8DE1900F1DE3C /* ChallengeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewModel.swift; sourceTree = "<group>"; };
 		785208002AD8DFC000F1DE3C /* ChallengeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeCard.swift; sourceTree = "<group>"; };
-		785208022AD8E1B600F1DE3C /* ChallengeDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDataModel.swift; sourceTree = "<group>"; };
-		785208042AD8E1C300F1DE3C /* CategoryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDataModel.swift; sourceTree = "<group>"; };
+		785208022AD8E1B600F1DE3C /* ChallengeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDataSource.swift; sourceTree = "<group>"; };
+		785208042AD8E1C300F1DE3C /* CategoryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDataSource.swift; sourceTree = "<group>"; };
 		786CECFD2AD9D8E60069ACF0 /* SavedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewModel.swift; sourceTree = "<group>"; };
 		786CECFF2AD9DBB50069ACF0 /* SavedCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCard.swift; sourceTree = "<group>"; };
 		786CED012AD9E4EC0069ACF0 /* HomeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButton.swift; sourceTree = "<group>"; };
@@ -84,9 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				785207E22AD873A200F1DE3C /* Category.swift */,
-				785208042AD8E1C300F1DE3C /* CategoryDataModel.swift */,
+				785208042AD8E1C300F1DE3C /* CategoryDataSource.swift */,
 				785207E42AD873D700F1DE3C /* Challenge.swift */,
-				785208022AD8E1B600F1DE3C /* ChallengeDataModel.swift */,
+				785208022AD8E1B600F1DE3C /* ChallengeDataSource.swift */,
 				785207E62AD8741B00F1DE3C /* Progress.swift */,
 				7842D7B12ADC7E270029A359 /* Place.swift */,
 			);
@@ -243,7 +243,7 @@
 				7842D7B02ADC75170029A359 /* FlexStack.swift in Sources */,
 				78D91BCF2AD87306007B88C4 /* ContentView.swift in Sources */,
 				785207E72AD8741B00F1DE3C /* Progress.swift in Sources */,
-				785208032AD8E1B600F1DE3C /* ChallengeDataModel.swift in Sources */,
+				785208032AD8E1B600F1DE3C /* ChallengeDataSource.swift in Sources */,
 				785207E52AD873D700F1DE3C /* Challenge.swift in Sources */,
 				785207FC2AD8DB9A00F1DE3C /* HomeViewModel.swift in Sources */,
 				7842D7B42ADC7F000029A359 /* PlaceCard.swift in Sources */,
@@ -252,7 +252,7 @@
 				785207ED2AD8769800F1DE3C /* ChallengeView.swift in Sources */,
 				7842D7B22ADC7E270029A359 /* Place.swift in Sources */,
 				786CED022AD9E4EC0069ACF0 /* HomeButton.swift in Sources */,
-				785208052AD8E1C300F1DE3C /* CategoryDataModel.swift in Sources */,
+				785208052AD8E1C300F1DE3C /* CategoryDataSource.swift in Sources */,
 				785207F12AD876C500F1DE3C /* SavedView.swift in Sources */,
 				78D91BCD2AD87306007B88C4 /* DesafikaApp.swift in Sources */,
 				785207EB2AD8768E00F1DE3C /* NoChallengeView.swift in Sources */,
