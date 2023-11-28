@@ -28,50 +28,50 @@ struct HomeView: View {
             .frame(maxWidth: 300)
             
             /// Categorias (Versão Dinâmica)
-            FlexStack {
-                ForEach(viewModel.list, id: \.title) { category in
-                    CategoryButton(category: viewModel.getBinding(category: category)) {
-                        viewModel.selectCategory(category: category)
+//            FlexStack {
+//                ForEach(viewModel.list, id: \.title) { category in
+//                    CategoryButton(category: viewModel.getBinding(category: category)) {
+//                        viewModel.selectCategory(category: category)
+//                    }
+//                }
+//                
+//                CategoryButton(category: viewModel.getBinding(category: Category.all)) {
+//                    viewModel.toggleAll()
+//                }
+//            }
+            
+            /// Categorias (Versão Estática)
+            VStack {
+                HStack {
+                    CategoryButton(category: viewModel.getBinding(category: viewModel.list[0])) {
+                        viewModel.selectCategory(category: viewModel.list[0])
+                    }
+                    CategoryButton(category: viewModel.getBinding(category: viewModel.list[1])) {
+                        viewModel.selectCategory(category: viewModel.list[1])
+                    }
+                    CategoryButton(category: viewModel.getBinding(category: viewModel.list[2])) {
+                        viewModel.selectCategory(category: viewModel.list[2])
                     }
                 }
                 
-                CategoryButton(category: viewModel.getBinding(category: Category.all)) {
-                    viewModel.toggleAll()
+                HStack {
+                    CategoryButton(category: viewModel.getBinding(category: viewModel.list[3])) {
+                        viewModel.selectCategory(category: viewModel.list[3])
+                    }
+                    CategoryButton(category: viewModel.getBinding(category: viewModel.list[4])) {
+                        viewModel.selectCategory(category: viewModel.list[4])
+                    }
+                }
+                
+                HStack {
+                    CategoryButton(category: viewModel.getBinding(category: viewModel.list[5])) {
+                        viewModel.selectCategory(category: viewModel.list[5])
+                    }
+                    CategoryButton(category: viewModel.getBinding(category: Category.all)) {
+                        viewModel.toggleAll()
+                    }
                 }
             }
-            
-            /// Categorias (Versão Estática)
-//            VStack {
-//                HStack {
-//                    CategoryButton(category: viewModel.getBinding(category: viewModel.list[0])) {
-//                        viewModel.selectCategory(category: viewModel.list[0])
-//                    }
-//                    CategoryButton(category: viewModel.getBinding(category: viewModel.list[1])) {
-//                        viewModel.selectCategory(category: viewModel.list[1])
-//                    }
-//                    CategoryButton(category: viewModel.getBinding(category: viewModel.list[2])) {
-//                        viewModel.selectCategory(category: viewModel.list[2])
-//                    }
-//                }
-//                
-//                HStack {
-//                    CategoryButton(category: viewModel.getBinding(category: viewModel.list[3])) {
-//                        viewModel.selectCategory(category: viewModel.list[3])
-//                    }
-//                    CategoryButton(category: viewModel.getBinding(category: viewModel.list[4])) {
-//                        viewModel.selectCategory(category: viewModel.list[4])
-//                    }
-//                }
-//                
-//                HStack {
-//                    CategoryButton(category: viewModel.getBinding(category: viewModel.list[5])) {
-//                        viewModel.selectCategory(category: viewModel.list[5])
-//                    }
-//                    CategoryButton(category: viewModel.getBinding(category: Category.all)) {
-//                        viewModel.toggleAll()
-//                    }
-//                }
-//            }
             
             /// Raio de distância
             VStack {
