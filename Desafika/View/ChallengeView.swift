@@ -22,9 +22,7 @@ struct ChallengeView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
-                        withAnimation {
-                            RouterService.shared.navigate(.home)
-                        }
+                        RouterService.shared.navigate(.home)
                     } label: {
                         Image(systemName: "house.circle.fill")
                             .font(.system(size: 32))
@@ -63,7 +61,6 @@ struct ChallengeView: View {
                         Button {
                             viewModel.acceptChallenge()
                             RouterService.shared.navigate(.saved)
-                            
                         } label: {
                             Image("accept")
                         }
