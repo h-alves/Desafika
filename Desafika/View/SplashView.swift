@@ -11,14 +11,13 @@ struct SplashView: View {
     var body: some View {
         VStack {
             Spacer()
-            
-            HStack {
-                Spacer()
-                
-                Text("Desafika")
-                Spacer()
-            }
-            Spacer()
+
+                VStack{
+                    Spacer()
+                    Image("Desafika")
+                    Spacer()
+                }
+           
         }
         .background(.opala)
         .onAppear {
