@@ -21,12 +21,6 @@ struct SplashView: View {
         }
         .background(.opala)
         .onAppear {
-            // Trigger the scale animation when the view appears
-            withAnimation {
-                
-            }
-            
-            
             Task {
                 try await Task.sleep(nanoseconds: Duration(seconds: 1).inNanoseconds())
                 

@@ -90,9 +90,7 @@ struct HomeView: View {
                 /// Botão
                 VStack(spacing: 12) {
                     HomeButton(activated: viewModel.buttonActivated) {
-                        withAnimation() {
-                            RouterService.shared.navigate(.challenge)
-                        }
+                        RouterService.shared.navigate(.challenge)
                     }
                     
                     Text("Gerar desafio")
@@ -113,9 +111,7 @@ struct HomeView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        withAnimation {
-                            RouterService.shared.navigate(.saved)
-                        }
+                        RouterService.shared.navigate(.saved)
                     } label: {
                         Image(systemName: "bookmark.circle.fill")
                             .font(.system(size: 32))
