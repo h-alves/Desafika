@@ -11,11 +11,27 @@ struct ChallengeView: View {
     @ObservedObject var viewModel = ChallengeViewModel()
     
     var body: some View {
-        VStack {
-            if viewModel.noChallenge {
-                NoChallengeView()
-            } else {
-                challengeView
+        NavigationStack {
+            VStack {
+                if viewModel.noChallenge {
+                    NoChallengeView()
+                } else {
+                    challengeView
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        withAnimation {
+                            RouterService.shared.navigate(.home)
+                        }
+                    } label: {
+                        Image(systemName: "house.circle.fill")
+                            .font(.system(size: 32))
+                            .fontWeight(.semibold)
+                            .foregroundColor(.quentão)
+                    }
+                }
             }
         }
     }
