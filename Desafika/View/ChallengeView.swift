@@ -127,8 +127,8 @@ struct ChallengeView: View {
         .padding(.horizontal, 32)
         .background(.opala)
         .onAppear {
-                viewModel.getRandomChallenge()
-                viewModel.loadPlaces()
+            viewModel.getRandomChallenge()
+            viewModel.loadPlaces()
         }
        
     }

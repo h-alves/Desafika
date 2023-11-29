@@ -16,11 +16,18 @@ class ChallengeViewModel: ObservableObject {
     @Published var places: [Place] = []
     
     func getRandomChallenge() {
+        print("Pegando desafio aleatório")
+        
+        print("Category Filter: \(categoryFilter)")
+        print("All challenges: \(ChallengeDataSource.shared.list)")
+        
         let challengeFilter = ChallengeDataSource.shared.list.filter { c in
             return categoryFilter.contains(where: { category in
-                category.self == c.category
+                category.title == c.category.title
             }) && c.progress == .none
         }
+        
+        print("Todos os desafios: \(challengeFilter)")
         
         if challengeFilter == [] {
             noChallenge = true
