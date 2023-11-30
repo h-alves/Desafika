@@ -11,23 +11,16 @@ struct SplashView: View {
     var body: some View {
         VStack {
             Spacer()
-            
-            HStack {
-                Spacer()
-                
-                Text("Desafika")
-                Spacer()
-            }
-            Spacer()
+
+                VStack{
+                    Spacer()
+                    Image("Desafika")
+                    Spacer()
+                }
+           
         }
         .background(.opala)
         .onAppear {
-            // Trigger the scale animation when the view appears
-            withAnimation {
-                
-            }
-            
-            
             Task {
                 try await Task.sleep(nanoseconds: Duration(seconds: 1).inNanoseconds())
                 
