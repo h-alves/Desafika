@@ -63,10 +63,8 @@ struct CategoryButton: View {
 #Preview {
     VStack {
         CategoryButton(category: .constant(Category(title: "teste", symbol: "house", isSelected: false))) {
-            print("a")
         }
         CategoryButton(category: .constant(Category(title: "teste", symbol: "house", isSelected: true))) {
-            print("b")
         }
     }
     .frame(maxWidth: .infinity, maxHeight: .infinity)
