@@ -49,10 +49,10 @@ class ChallengeViewModel: ObservableObject {
     }
     
     func loadPlaces() {
-        places.append(Place(name: "teste 1", category: "Restaurante", price: 1, review: 2.5, distance: 3.7))
-        places.append(Place(name: "teste 2", category: "Restaurante", price: 1, review: 2.5, distance: 3.7))
-        places.append(Place(name: "teste 3", category: "Restaurante", price: 1, review: 2.5, distance: 3.7))
-        places.append(Place(name: "teste 4", category: "Restaurante", price: 1, review: 2.5, distance: 3.7))
-        places.append(Place(name: "teste 5", category: "Restaurante", price: 1, review: 2.5, distance: 3.7))
+        places.append(Place(name: "teste 1", category: "Restaurante", price: 1, review: 2.5, distance: 3.7, url: "https://www.google.com"))
+        places.append(Place(name: "teste 2", category: "Restaurante", price: 1, review: 2.5, distance: 3.7, url: "https://www.google.com"))
+        places.append(Place(name: "teste 3", category: "Restaurante", price: 1, review: 2.5, distance: 3.7, url: "https://www.google.com"))
+        places.append(Place(name: "teste 4", category: "Restaurante", price: 1, review: 2.5, distance: 3.7, url: "https://www.google.com"))
+        places.append(Place(name: "teste 5", category: "Restaurante", price: 1, review: 2.5, distance: 3.7, url: "https://www.google.com"))
     }
 }

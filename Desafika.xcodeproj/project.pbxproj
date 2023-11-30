@@ -36,6 +36,19 @@
 		8CE0EF4A2B167207008F5319 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0EF492B167207008F5319 /* SplashView.swift */; };
 		8CE0EF4C2B167299008F5319 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0EF4B2B167299008F5319 /* StorageService.swift */; };
 		8CE0EF4F2B167316008F5319 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0EF4E2B167316008F5319 /* Duration.swift */; };
+		F078A8952B17C7F700B43363 /* NearByEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078A8912B17C7F700B43363 /* NearByEnum.swift */; };
+		F078A8962B17C7F700B43363 /* GoogleApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078A8922B17C7F700B43363 /* GoogleApiHelper.swift */; };
+		F078A8972B17C7F700B43363 /* GoogleApiHelper+Nearby.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078A8932B17C7F700B43363 /* GoogleApiHelper+Nearby.swift */; };
+		F078A8982B17C7F700B43363 /* ApiCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078A8942B17C7F700B43363 /* ApiCalls.swift */; };
+		F078A89F2B1901B200B43363 /* GooglePlaces.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F078A89E2B1901B200B43363 /* GooglePlaces.bundle */; };
+		F078A8A22B1901D700B43363 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F078A8A12B1901D700B43363 /* CoreGraphics.framework */; };
+		F078A8A42B1901DE00B43363 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F078A8A32B1901DE00B43363 /* CoreLocation.framework */; };
+		F078A8A62B1901EB00B43363 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F078A8A52B1901EB00B43363 /* libc++.tbd */; };
+		F078A8A82B1901F300B43363 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F078A8A72B1901F300B43363 /* libz.tbd */; };
+		F078A8AA2B1901FB00B43363 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F078A8A92B1901FB00B43363 /* QuartzCore.framework */; };
+		F078A8AC2B19020000B43363 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F078A8AB2B19020000B43363 /* UIKit.framework */; };
+		F078A8AE2B1903B200B43363 /* GooglePlaces.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F078A8AD2B1903B200B43363 /* GooglePlaces.xcframework */; };
+		F078A8B02B1903DF00B43363 /* PlaceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078A8AF2B1903DF00B43363 /* PlaceUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +82,20 @@
 		8CE0EF492B167207008F5319 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		8CE0EF4B2B167299008F5319 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		8CE0EF4E2B167316008F5319 /* Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
+		F078A88F2B17C5A800B43363 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F078A8912B17C7F700B43363 /* NearByEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearByEnum.swift; sourceTree = "<group>"; };
+		F078A8922B17C7F700B43363 /* GoogleApiHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleApiHelper.swift; sourceTree = "<group>"; };
+		F078A8932B17C7F700B43363 /* GoogleApiHelper+Nearby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GoogleApiHelper+Nearby.swift"; sourceTree = "<group>"; };
+		F078A8942B17C7F700B43363 /* ApiCalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiCalls.swift; sourceTree = "<group>"; };
+		F078A89E2B1901B200B43363 /* GooglePlaces.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GooglePlaces.bundle; sourceTree = "<group>"; };
+		F078A8A12B1901D700B43363 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F078A8A32B1901DE00B43363 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F078A8A52B1901EB00B43363 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		F078A8A72B1901F300B43363 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		F078A8A92B1901FB00B43363 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F078A8AB2B19020000B43363 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F078A8AD2B1903B200B43363 /* GooglePlaces.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GooglePlaces.xcframework; sourceTree = "<group>"; };
+		F078A8AF2B1903DF00B43363 /* PlaceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +103,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F078A8AC2B19020000B43363 /* UIKit.framework in Frameworks */,
+				F078A8AA2B1901FB00B43363 /* QuartzCore.framework in Frameworks */,
+				F078A8A82B1901F300B43363 /* libz.tbd in Frameworks */,
+				F078A8A62B1901EB00B43363 /* libc++.tbd in Frameworks */,
+				F078A8A42B1901DE00B43363 /* CoreLocation.framework in Frameworks */,
+				F078A8AE2B1903B200B43363 /* GooglePlaces.xcframework in Frameworks */,
+				F078A8A22B1901D700B43363 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +119,7 @@
 		7842D7AE2ADC74FA0029A359 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				F078A8AF2B1903DF00B43363 /* PlaceUtils.swift */,
 				7842D7AF2ADC75170029A359 /* FlexStack.swift */,
 				8CE0EF4E2B167316008F5319 /* Duration.swift */,
 			);
@@ -145,6 +180,7 @@
 			children = (
 				78D91BCB2AD87306007B88C4 /* Desafika */,
 				78D91BCA2AD87306007B88C4 /* Products */,
+				F078A8A02B1901D700B43363 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,8 +195,10 @@
 		78D91BCB2AD87306007B88C4 /* Desafika */ = {
 			isa = PBXGroup;
 			children = (
+				F078A88F2B17C5A800B43363 /* Info.plist */,
 				78D91BCC2AD87306007B88C4 /* DesafikaApp.swift */,
 				78D91BCE2AD87306007B88C4 /* ContentView.swift */,
+				F078A8902B17C7F700B43363 /* API */,
 				785207FF2AD8DF7000F1DE3C /* Components */,
 				8CE0EF462B166812008F5319 /* Services */,
 				785207DF2AD8735B00F1DE3C /* View */,
@@ -168,6 +206,8 @@
 				785207DE2AD8735600F1DE3C /* Model */,
 				7842D7AE2ADC74FA0029A359 /* Utils */,
 				78D91BD02AD87308007B88C4 /* Assets.xcassets */,
+				F078A8AD2B1903B200B43363 /* GooglePlaces.xcframework */,
+				F078A89E2B1901B200B43363 /* GooglePlaces.bundle */,
 				78D91BD22AD87308007B88C4 /* Preview Content */,
 			);
 			path = Desafika;
@@ -188,6 +228,30 @@
 				8CE0EF4B2B167299008F5319 /* StorageService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		F078A8902B17C7F700B43363 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				F078A8912B17C7F700B43363 /* NearByEnum.swift */,
+				F078A8922B17C7F700B43363 /* GoogleApiHelper.swift */,
+				F078A8932B17C7F700B43363 /* GoogleApiHelper+Nearby.swift */,
+				F078A8942B17C7F700B43363 /* ApiCalls.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		F078A8A02B1901D700B43363 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F078A8AB2B19020000B43363 /* UIKit.framework */,
+				F078A8A92B1901FB00B43363 /* QuartzCore.framework */,
+				F078A8A72B1901F300B43363 /* libz.tbd */,
+				F078A8A52B1901EB00B43363 /* libc++.tbd */,
+				F078A8A32B1901DE00B43363 /* CoreLocation.framework */,
+				F078A8A12B1901D700B43363 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78D91BD42AD87308007B88C4 /* Preview Assets.xcassets in Resources */,
+				F078A89F2B1901B200B43363 /* GooglePlaces.bundle in Resources */,
 				78D91BD12AD87308007B88C4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				786CED002AD9DBB50069ACF0 /* SavedCard.swift in Sources */,
+				F078A8B02B1903DF00B43363 /* PlaceUtils.swift in Sources */,
 				785208012AD8DFC000F1DE3C /* ChallengeCard.swift in Sources */,
 				8CE0EF4A2B167207008F5319 /* SplashView.swift in Sources */,
 				786CED042AD9EBA40069ACF0 /* CategoryButton.swift in Sources */,
@@ -269,9 +335,11 @@
 				8CE0EF4F2B167316008F5319 /* Duration.swift in Sources */,
 				785207E72AD8741B00F1DE3C /* Progress.swift in Sources */,
 				8CE0EF4C2B167299008F5319 /* StorageService.swift in Sources */,
+				F078A8952B17C7F700B43363 /* NearByEnum.swift in Sources */,
 				785208032AD8E1B600F1DE3C /* ChallengeDataSource.swift in Sources */,
 				785207E52AD873D700F1DE3C /* Challenge.swift in Sources */,
 				8CE0EF452B166805008F5319 /* RouterService.swift in Sources */,
+				F078A8962B17C7F700B43363 /* GoogleApiHelper.swift in Sources */,
 				785207FC2AD8DB9A00F1DE3C /* HomeViewModel.swift in Sources */,
 				7842D7B42ADC7F000029A359 /* PlaceCard.swift in Sources */,
 				785207EF2AD876B700F1DE3C /* OnboardingView.swift in Sources */,
@@ -284,8 +352,10 @@
 				785207F12AD876C500F1DE3C /* SavedView.swift in Sources */,
 				78D91BCD2AD87306007B88C4 /* DesafikaApp.swift in Sources */,
 				785207EB2AD8768E00F1DE3C /* NoChallengeView.swift in Sources */,
+				F078A8972B17C7F700B43363 /* GoogleApiHelper+Nearby.swift in Sources */,
 				785207FE2AD8DE1900F1DE3C /* ChallengeViewModel.swift in Sources */,
 				786CECFE2AD9D8E60069ACF0 /* SavedViewModel.swift in Sources */,
+				F078A8982B17C7F700B43363 /* ApiCalls.swift in Sources */,
 				785207E32AD873A200F1DE3C /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,6 +420,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -406,6 +477,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
@@ -423,8 +495,11 @@
 				DEVELOPMENT_TEAM = 225S533H7W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Desafika/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Desafika;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Encontrar locais próximos para cumprir seus desafios";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Encontrar locais próximos para cumprir seus desafios";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -457,8 +532,11 @@
 				DEVELOPMENT_TEAM = 225S533H7W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Desafika/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Desafika;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Encontrar locais próximos para cumprir seus desafios";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Encontrar locais próximos para cumprir seus desafios";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
