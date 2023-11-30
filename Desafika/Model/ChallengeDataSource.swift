@@ -31,19 +31,16 @@ class ChallengeDataSource: ObservableObject {
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(list) {
             defaults.set(encoded, forKey: "challengeDataSource")
-            print("saved \(list.count)")
         }
     }
     
     func retrieve() {
         if let saved = defaults.object(forKey: "challengeDataSource") as? Data {
-            print("saved")
             let decoder = JSONDecoder()
             
             do {
                 let loaded = try decoder.decode([Challenge].self, from: saved)
                 list = loaded
-                print("retrieved \(loaded.count)")
             } catch {
                 print(error)
             }

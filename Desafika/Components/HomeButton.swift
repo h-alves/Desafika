@@ -49,9 +49,3 @@ struct HomeButton: View {
         return "buttonOff"
     }
 }
-
-#Preview {
-    HomeButton(activated: true) {
-        print("a")
-    }
-}

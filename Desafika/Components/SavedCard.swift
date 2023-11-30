@@ -62,13 +62,11 @@ struct SavedCard: View {
 #Preview {
     VStack {
         SavedCard(challenge: Challenge(description: "Teste muito longo mesmo pra testar se fica gigante o texto na tela, vamo ver!", category: Category.ambient, progress: Progress.inProgress)) {
-            print("teste")
         } secondayFunc: {
             
         }
         
         SavedCard(challenge: Challenge(description: "Teste muito longo mesmo pra testar se fica gigante o texto na tela, vamo ver!", category: Category.ambient, progress: Progress.finished)) {
-            print("teste 2")
         } secondayFunc: {
             
         }
