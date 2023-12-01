@@ -15,15 +15,14 @@ struct ChallengeSheet: View {
             Text(viewModel.challengePresented.description)
             
             Button {
-                viewModel.deleteChallenge(challenge: viewModel.challengePresented)
-                viewModel.isPresented = false
+                viewModel.popupIsPresented = true
             } label: {
                 Text("Excluir")
             }
             
             Button {
                 viewModel.finishChallenge(challenge: viewModel.challengePresented)
-                viewModel.isPresented = false
+                viewModel.sheetIsPresented = false
             } label: {
                 Text("Concluir")
             }

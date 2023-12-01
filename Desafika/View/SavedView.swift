@@ -33,7 +33,7 @@ struct SavedView: View {
                             ForEach(viewModel.inProgress(), id: \.description) { c in
                                 SavedCard(challenge: c) {
                                     viewModel.challengePresented = c
-                                    viewModel.isPresented = true
+                                    viewModel.sheetIsPresented = true
                                 } secondayFunc: {
                                     viewModel.finishChallenge(challenge: c)
                                 }
@@ -52,7 +52,7 @@ struct SavedView: View {
                         ForEach(viewModel.finished(), id: \.description) { c in
                             SavedCard(challenge: c) {
                                 viewModel.challengePresented = c
-                                viewModel.isPresented = true
+                                viewModel.sheetIsPresented = true
                             } secondayFunc: {
                                 viewModel.unfinishChallenge(challenge: c)
                             }
@@ -82,8 +82,19 @@ struct SavedView: View {
                     }
                 }
             }
-            .sheet(isPresented: $viewModel.isPresented) {
+            .sheet(isPresented: $viewModel.sheetIsPresented) {
                 ChallengeSheet(viewModel: viewModel)
+            }
+            .overlay {
+                if viewModel.popupIsPresented {
+                    PopUp() {
+                        viewModel.deleteChallenge(challenge: viewModel.challengePresented)
+                        viewModel.popupIsPresented = false
+                        viewModel.sheetIsPresented = false
+                    } cancel: {
+                        viewModel.popupIsPresented = false
+                    }
+                }
             }
         }
     }

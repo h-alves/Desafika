@@ -11,8 +11,10 @@ import Combine
 class SavedViewModel: ObservableObject {
     @Published var filteredList: [Challenge] = []
     
-    @Published var isPresented = false
+    @Published var sheetIsPresented = false
     @Published var challengePresented = Challenge.test
+    
+    @Published var popupIsPresented = false
     
     var bag = Set<AnyCancellable>()
     
