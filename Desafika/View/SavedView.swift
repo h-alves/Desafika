@@ -90,7 +90,6 @@ struct SavedView: View {
                     PopUp() {
                         viewModel.deleteChallenge(challenge: viewModel.challengePresented)
                         viewModel.popupIsPresented = false
-                        viewModel.sheetIsPresented = false
                     } cancel: {
                         viewModel.popupIsPresented = false
                     }

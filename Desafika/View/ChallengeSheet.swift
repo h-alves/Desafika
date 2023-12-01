@@ -24,6 +24,7 @@ struct ChallengeSheet: View {
                 HStack {
                     Button {
                         viewModel.popupIsPresented = true
+                        viewModel.sheetIsPresented = false
                     } label: {
                         Text("Excluir")
                     }
