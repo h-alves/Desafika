@@ -11,6 +11,9 @@ import Combine
 class SavedViewModel: ObservableObject {
     @Published var filteredList: [Challenge] = []
     
+    @Published var isPresented = false
+    @Published var challengePresented = Challenge.test
+    
     var bag = Set<AnyCancellable>()
     
     func subscribe() {
@@ -63,6 +66,15 @@ class SavedViewModel: ObservableObject {
         }
         
         ChallengeDataSource.shared.list[index!].progress = .inProgress
+        updateList()
+    }
+    
+    func deleteChallenge(challenge: Challenge) {
+        let index = ChallengeDataSource.shared.list.firstIndex { c in
+            return c.description == challenge.description
+        }
+        
+        ChallengeDataSource.shared.list[index!].progress = .none
         updateList()
     }
 }

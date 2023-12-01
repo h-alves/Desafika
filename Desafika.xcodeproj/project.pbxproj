@@ -27,6 +27,7 @@
 		786CED002AD9DBB50069ACF0 /* SavedCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786CECFF2AD9DBB50069ACF0 /* SavedCard.swift */; };
 		786CED022AD9E4EC0069ACF0 /* HomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786CED012AD9E4EC0069ACF0 /* HomeButton.swift */; };
 		786CED042AD9EBA40069ACF0 /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786CED032AD9EBA40069ACF0 /* CategoryButton.swift */; };
+		78929E242B190ABE006467A3 /* ChallengeSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78929E232B190ABE006467A3 /* ChallengeSheet.swift */; };
 		78B15AEA2B1661DA00E99527 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B15AE92B1661DA00E99527 /* OnboardingViewModel.swift */; };
 		78D91BCD2AD87306007B88C4 /* DesafikaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D91BCC2AD87306007B88C4 /* DesafikaApp.swift */; };
 		78D91BCF2AD87306007B88C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D91BCE2AD87306007B88C4 /* ContentView.swift */; };
@@ -59,6 +60,7 @@
 		786CECFF2AD9DBB50069ACF0 /* SavedCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCard.swift; sourceTree = "<group>"; };
 		786CED012AD9E4EC0069ACF0 /* HomeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButton.swift; sourceTree = "<group>"; };
 		786CED032AD9EBA40069ACF0 /* CategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
+		78929E232B190ABE006467A3 /* ChallengeSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeSheet.swift; sourceTree = "<group>"; };
 		78B15AE92B1661DA00E99527 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		78D91BC92AD87306007B88C4 /* Desafika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Desafika.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78D91BCC2AD87306007B88C4 /* DesafikaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafikaApp.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				785207EA2AD8768E00F1DE3C /* NoChallengeView.swift */,
 				785207EC2AD8769800F1DE3C /* ChallengeView.swift */,
 				785207F02AD876C500F1DE3C /* SavedView.swift */,
+				78929E232B190ABE006467A3 /* ChallengeSheet.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				785207FC2AD8DB9A00F1DE3C /* HomeViewModel.swift in Sources */,
 				7842D7B42ADC7F000029A359 /* PlaceCard.swift in Sources */,
 				785207EF2AD876B700F1DE3C /* OnboardingView.swift in Sources */,
+				78929E242B190ABE006467A3 /* ChallengeSheet.swift in Sources */,
 				785207E92AD8745100F1DE3C /* HomeView.swift in Sources */,
 				785207ED2AD8769800F1DE3C /* ChallengeView.swift in Sources */,
 				7842D7B22ADC7E270029A359 /* Place.swift in Sources */,

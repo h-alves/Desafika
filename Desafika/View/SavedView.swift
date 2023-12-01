@@ -32,7 +32,8 @@ struct SavedView: View {
                         VStack(spacing: 12) {
                             ForEach(viewModel.inProgress(), id: \.description) { c in
                                 SavedCard(challenge: c) {
-                                    
+                                    viewModel.challengePresented = c
+                                    viewModel.isPresented = true
                                 } secondayFunc: {
                                     viewModel.finishChallenge(challenge: c)
                                 }
@@ -50,7 +51,8 @@ struct SavedView: View {
                         
                         ForEach(viewModel.finished(), id: \.description) { c in
                             SavedCard(challenge: c) {
-                                // Abrir o desafio em um popup
+                                viewModel.challengePresented = c
+                                viewModel.isPresented = true
                             } secondayFunc: {
                                 viewModel.unfinishChallenge(challenge: c)
                             }
@@ -79,6 +81,9 @@ struct SavedView: View {
                             .foregroundColor(.quentão)
                     }
                 }
+            }
+            .sheet(isPresented: $viewModel.isPresented) {
+                ChallengeSheet(viewModel: viewModel)
             }
         }
     }
