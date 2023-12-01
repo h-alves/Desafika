@@ -31,7 +31,7 @@ class ChallengeViewModel: ObservableObject {
         
         if challengeFilter == [] {
             noChallenge = true
-        } else {
+        } else if challengeFilter.count > 1 {
             var newChallenge = challengeFilter.randomElement()!
             while newChallenge == challenge {
                 newChallenge = challengeFilter.randomElement()!
