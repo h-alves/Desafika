@@ -12,19 +12,31 @@ struct ChallengeSheet: View {
     
     var body: some View {
         VStack {
-            Text(viewModel.challengePresented.description)
-            
-            Button {
-                viewModel.popupIsPresented = true
-            } label: {
-                Text("Excluir")
+            HStack {
+                Text(viewModel.challengePresented.category.title)
+                
+                Image(systemName: viewModel.challengePresented.category.symbol)
             }
             
-            Button {
-                viewModel.finishChallenge(challenge: viewModel.challengePresented)
-                viewModel.sheetIsPresented = false
-            } label: {
-                Text("Concluir")
+            Text(viewModel.challengePresented.description)
+            
+            if viewModel.challengePresented.progress == .inProgress {
+                HStack {
+                    Button {
+                        viewModel.popupIsPresented = true
+                    } label: {
+                        Text("Excluir")
+                    }
+                    
+                    Button {
+                        viewModel.finishChallenge(challenge: viewModel.challengePresented)
+                        viewModel.sheetIsPresented = false
+                    } label: {
+                        Text("Concluir")
+                    }
+                }
+            } else if viewModel.challengePresented.progress == .finished {
+                Text("Terminou")
             }
         }
         .padding(.top, 12)
