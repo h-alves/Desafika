@@ -95,7 +95,7 @@ struct OnboardingView: View {
                 Text("Começar")
                     .font(.title3)
                     .fontWeight(.bold)
-                    .foregroundStyle(.white)
+                    .foregroundStyle(.desafikadoLight)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 16)
                     .background(.quentão)
