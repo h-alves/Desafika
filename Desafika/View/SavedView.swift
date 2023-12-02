@@ -14,12 +14,10 @@ struct SavedView: View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: 32) {
-                    Spacer()
-                    
                     /// Em Progresso
                     VStack(spacing: 16) {
                         VStack(spacing: 12) {
-                            Image("coupleLove")
+                            Image("savedCouple")
                                 .resizable()
                                 .frame(width: 80, height: 42.22)
                             
@@ -27,6 +25,7 @@ struct SavedView: View {
                                 .font(.title)
                                 .fontWeight(.bold)
                                 .foregroundStyle(.meiaNoite)
+                                .multilineTextAlignment(.center)
                         }
                         
                         VStack(spacing: 12) {
@@ -44,7 +43,7 @@ struct SavedView: View {
                     /// Concluídos
                     VStack(spacing: 12) {
                         Text("Concluídos")
-                            .font(.callout)
+                            .font(.headline)
                             .fontWeight(.semibold)
                             .foregroundStyle(.meiaNoite)
                             .opacity(0.5)
@@ -62,6 +61,7 @@ struct SavedView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding(.horizontal, 32)
+            .padding(.top, 32)
             .background(.opala)
             .scrollIndicators(.hidden)
             .onAppear {
