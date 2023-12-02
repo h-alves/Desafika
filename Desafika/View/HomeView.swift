@@ -13,8 +13,6 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 28) {
-                Spacer()
-                
                 /// Texto
                 VStack(spacing: 8) {
                     Text("Prontos para um novo desafio?")
@@ -27,65 +25,19 @@ struct HomeView: View {
                         .foregroundStyle(.meiaNoite)
                         .multilineTextAlignment(.center)
                 }
-                .frame(maxWidth: 300)
                 
-                /// Categorias (Versão Dinâmica)
-                //            FlexStack {
-                //                ForEach(viewModel.list, id: \.title) { category in
-                //                    CategoryButton(category: viewModel.getBinding(category: category)) {
-                //                        viewModel.selectCategory(category: category)
-                //                    }
-                //                }
-                //                
-                //                CategoryButton(category: viewModel.getBinding(category: Category.all)) {
-                //                    viewModel.toggleAll()
-                //                }
-                //            }
-                
-                /// Categorias (Versão Estática)
-                VStack {
-                    HStack {
-                        CategoryButton(category: viewModel.getBinding(category: viewModel.list[0])) {
-                            viewModel.selectCategory(category: viewModel.list[0])
-                        }
-                        CategoryButton(category: viewModel.getBinding(category: viewModel.list[1])) {
-                            viewModel.selectCategory(category: viewModel.list[1])
-                        }
-                        CategoryButton(category: viewModel.getBinding(category: viewModel.list[2])) {
-                            viewModel.selectCategory(category: viewModel.list[2])
+                // Categorias (Versão Dinâmica)
+                FlexStack {
+                    ForEach(viewModel.list, id: \.title) { category in
+                        CategoryButton(category: viewModel.getBinding(category: category)) {
+                            viewModel.selectCategory(category: category)
                         }
                     }
                     
-                    HStack {
-                        CategoryButton(category: viewModel.getBinding(category: viewModel.list[3])) {
-                            viewModel.selectCategory(category: viewModel.list[3])
-                        }
-                        CategoryButton(category: viewModel.getBinding(category: viewModel.list[4])) {
-                            viewModel.selectCategory(category: viewModel.list[4])
-                        }
-                    }
-                    
-                    HStack {
-                        CategoryButton(category: viewModel.getBinding(category: viewModel.list[5])) {
-                            viewModel.selectCategory(category: viewModel.list[5])
-                        }
-                        CategoryButton(category: viewModel.getBinding(category: Category.all)) {
-                            viewModel.toggleAll()
-                        }
+                    CategoryButton(category: viewModel.getBinding(category: Category.all)) {
+                        viewModel.toggleAll()
                     }
                 }
-                
-                /// Raio de distância
-                //            VStack {
-                //                Text("Sugerir lugares em um raio de:")
-                //                    .font(.footnote)
-                //                    .foregroundStyle(.meiaNoite)
-                //                    .opacity(0.5)
-                //                
-                //                // Slider
-                //            }
-                
-                Spacer()
                 
                 /// Botão
                 VStack(spacing: 12) {
@@ -104,6 +56,8 @@ struct HomeView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding(.horizontal, 32)
+            .padding(.top, 28)
+            .ignoresSafeArea(edges: .bottom)
             .background(.opala)
             .onAppear {
                 viewModel.toggleButton()
@@ -113,10 +67,17 @@ struct HomeView: View {
                     Button {
                         RouterService.shared.navigate(.saved)
                     } label: {
-                        Image(systemName: "bookmark.circle.fill")
-                            .font(.system(size: 32))
-                            .fontWeight(.semibold)
-                            .foregroundColor(.quentão)
+                        ZStack {
+                            Image(systemName: "circle.fill")
+                                .font(.system(size: 32))
+                                .fontWeight(.semibold)
+                                .foregroundColor(.desafikadoLight)
+                            
+                            Image(systemName: "bookmark.circle.fill")
+                                .font(.system(size: 32))
+                                .fontWeight(.semibold)
+                                .foregroundColor(.quentão)
+                        }
                     }
                 }
             }
