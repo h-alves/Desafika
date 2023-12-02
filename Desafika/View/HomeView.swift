@@ -72,6 +72,7 @@ struct HomeView: View {
                                 .font(.system(size: 32))
                                 .fontWeight(.semibold)
                                 .foregroundColor(.desafikadoLight)
+                                .shadow(radius: 10, x: 2, y: 4)
                             
                             Image(systemName: "bookmark.circle.fill")
                                 .font(.system(size: 32))

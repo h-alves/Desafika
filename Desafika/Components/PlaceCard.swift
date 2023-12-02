@@ -11,16 +11,16 @@ struct PlaceCard: View {
     let place: Place
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 3) {
             Text(place.name.capitalized)
                 .fontWeight(.bold)
                 .foregroundStyle(.meiaNoite)
                 .frame(height: 18)
             
             HStack {
-                Text(place.category)
+                Text("\(place.distance, specifier: "%.1f") km")
                 
-                if place.price > 0 && place.category != "" {
+                if place.price > 0 && place.distance != 0 {
                     Text("|")
                 }
                 
@@ -55,18 +55,11 @@ struct PlaceCard: View {
                 .foregroundStyle(.papaya)
                 
                 Spacer()
-                
-                if place.distance != 0 {
-                    Text("\(place.distance, specifier: "%.1f") km")
-                        .font(.caption)
-                        .foregroundStyle(.meiaNoite)
-                        .opacity(0.5)
-                }
             }
         }
-        .padding()
+        .padding(16)
         .frame(width: 227, height: 93)
-        .background(.white)
+        .background(.desafikado)
         .clipShape(RoundedRectangle(cornerRadius: 12))
     }
 }

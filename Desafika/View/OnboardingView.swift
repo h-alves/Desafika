@@ -102,7 +102,6 @@ struct OnboardingView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 20))
             }
             .shadow(radius: 10, x: 2, y: 4)
-            
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(.horizontal, 48)
