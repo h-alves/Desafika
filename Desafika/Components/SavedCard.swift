@@ -18,16 +18,18 @@ struct SavedCard: View {
         } label: {
             HStack(spacing: 16) {
                 Text(challenge.description)
-                    .font(.callout)
+                    .font(.subheadline)
                     .fontWeight(.bold)
                     .foregroundStyle(textColor())
-                    .frame(width: 237, height: 44, alignment: .leading)
+                    .frame(width: 237, height: 55, alignment: .leading)
+                    .multilineTextAlignment(.leading)
                 
                 Button {
                     secondayFunc()
                 } label: {
                     Image(systemName: buttonSymbol())
                         .font(.title)
+                        .fontWeight(.bold)
                         .foregroundStyle(textColor())
                 }
             }
@@ -41,12 +43,12 @@ struct SavedCard: View {
         if challenge.progress == .inProgress {
             return .quentão
         }
-        return .white
+        return .desafikado
     }
     
     func textColor() -> Color {
         if challenge.progress == .inProgress {
-            return .opala
+            return .desafikadoLight
         }
         return .chiclete
     }

@@ -20,11 +20,11 @@ struct CategoryButton: View {
                 Image(systemName: buttonSymbol())
                     .font(.callout)
                     .fontWeight(.bold)
-                    .foregroundStyle(textColor())
+                    .foregroundStyle(buttonColor())
                 
                 Text(category!.title.capitalized)
                     .font(.subheadline)
-                    .fontWeight(.bold)
+                    .fontWeight(.semibold)
                     .foregroundStyle(textColor())
             }
             .padding(.horizontal, 12)
@@ -47,7 +47,14 @@ struct CategoryButton: View {
     
     func textColor() -> Color {
         if category!.isSelected {
-            return .opala
+            return .opalaLight
+        }
+        return .meiaNoite
+    }
+    
+    func buttonColor() -> Color {
+        if category!.isSelected {
+            return .opalaLight
         }
         return .quentão
     }

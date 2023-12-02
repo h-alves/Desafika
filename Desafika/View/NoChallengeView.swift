@@ -9,13 +9,16 @@ import SwiftUI
 
 struct NoChallengeView: View {
     var body: some View {
-        HStack {
+        VStack(spacing: 24) {
             Image("noChallenge")
+                .resizable()
+                .frame(width: 220, height: 151)
             
             Text("Vocês já completaram todos os desafios possíveis!")
-                .font(.footnote)
+                .font(.headline)
                 .foregroundStyle(.meiaNoite)
                 .opacity(0.5)
+                .multilineTextAlignment(.center)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(.horizontal, 32)

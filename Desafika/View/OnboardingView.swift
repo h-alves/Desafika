@@ -95,14 +95,13 @@ struct OnboardingView: View {
                 Text("Começar")
                     .font(.title3)
                     .fontWeight(.bold)
-                    .foregroundStyle(.white)
+                    .foregroundStyle(.desafikadoLight)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 16)
                     .background(.quentão)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
             }
             .shadow(radius: 10, x: 2, y: 4)
-            
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(.horizontal, 48)

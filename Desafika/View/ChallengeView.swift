@@ -24,10 +24,18 @@ struct ChallengeView: View {
                     Button {
                         RouterService.shared.navigate(.home)
                     } label: {
-                        Image(systemName: "house.circle.fill")
-                            .font(.system(size: 32))
-                            .fontWeight(.semibold)
-                            .foregroundColor(.quentão)
+                        ZStack {
+                            Image(systemName: "circle.fill")
+                                .font(.system(size: 32))
+                                .fontWeight(.semibold)
+                                .foregroundColor(.desafikadoLight)
+                                .shadow(radius: 10, x: 2, y: 4)
+                            
+                            Image(systemName: "house.circle.fill")
+                                .font(.system(size: 32))
+                                .fontWeight(.semibold)
+                                .foregroundColor(.quentão)
+                        }
                     }
                 }
             }
@@ -35,9 +43,7 @@ struct ChallengeView: View {
     }
     
     var challengeView: some View {
-        VStack {
-            Spacer()
-            
+        VStack(spacing: 48) {
             /// Desafio & Botões
             VStack(spacing: 24) {
                 VStack(spacing: 16) {
@@ -63,6 +69,9 @@ struct ChallengeView: View {
                             RouterService.shared.navigate(.saved)
                         } label: {
                             Image("accept")
+                                .resizable()
+                                .frame(width: 80, height: 82)
+                                .shadow(radius: 10, x: 2, y: 4)
                         }
                         
                         Text("Salvar")
@@ -81,6 +90,9 @@ struct ChallengeView: View {
                             viewModel.getRandomChallenge()
                         } label: {
                             Image("other")
+                                .resizable()
+                                .frame(width: 80, height: 82)
+                                .shadow(radius: 10, x: 2, y: 4)
                         }
                         
                         Text("Outro")
@@ -91,8 +103,6 @@ struct ChallengeView: View {
                     }
                 }
             }
-            
-            Spacer()
             
             /// Lugares
             VStack(spacing: 24) {
