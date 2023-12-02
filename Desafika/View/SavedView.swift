@@ -75,10 +75,18 @@ struct SavedView: View {
                     Button {
                         RouterService.shared.navigate(.home)
                     } label: {
-                        Image(systemName: "house.circle.fill")
-                            .font(.system(size: 32))
-                            .fontWeight(.semibold)
-                            .foregroundColor(.quentão)
+                        ZStack {
+                            Image(systemName: "circle.fill")
+                                .font(.system(size: 32))
+                                .fontWeight(.semibold)
+                                .foregroundColor(.desafikadoLight)
+                                .shadow(radius: 10, x: 2, y: 4)
+                            
+                            Image(systemName: "house.circle.fill")
+                                .font(.system(size: 32))
+                                .fontWeight(.semibold)
+                                .foregroundColor(.quentão)
+                        }
                     }
                 }
             }
