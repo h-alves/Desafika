@@ -53,7 +53,7 @@ struct PopUp: View {
                 }
             }
             .padding(.top, 36)
-            .background(.white)
+            .background(.desafikado)
             .clipShape(RoundedRectangle(cornerRadius: 14))
             .padding(.horizontal, 64)
         }
