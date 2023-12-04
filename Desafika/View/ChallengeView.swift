@@ -16,9 +16,12 @@ struct ChallengeView: View {
                 if viewModel.noChallenge {
                     NoChallengeView()
                 } else {
-                    challengeView
+                    ScrollView {
+                        challengeView
+                    }
                 }
             }
+            .background(.opala)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
@@ -104,23 +107,24 @@ struct ChallengeView: View {
                 }
             }
             
+            Spacer()
+            
             /// Lugares
             VStack(spacing: 24) {
                 if viewModel.challenge.category == Category.house {
                     HStack(spacing: 16) {
                         Image("home")
                             .resizable()
-                            .frame(width: 60, height: 54)
+                            .frame(width: 74, height: 65)
                         
                         Text("Sugerimos fazer essa atividade em casa.")
                             .font(.footnote)
                             .foregroundStyle(.meiaNoite)
                             .opacity(0.5)
-                            .frame(width: 130)
                     }
                 } else {
                     HStack(spacing: 16) {
-                        Image("coupleLove")
+                        Image("noCouple")
                             .resizable()
                             .frame(width: 80, height: 42.22)
                         
@@ -148,6 +152,7 @@ struct ChallengeView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(.horizontal, 32)
+        .padding(.top, 24)
         .background(.opala)
         .onAppear {
             viewModel.getRandomChallenge()
