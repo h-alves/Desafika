@@ -9,13 +9,18 @@ import Foundation
 import GooglePlaces
 
 class PlaceUtils {
-    static func searchDesafioPlaces(desafio: Challenge, locationManager: CLLocationManager, placesCount: Int, callbackEach: @escaping (Place) -> Void, callbackGeneral: @escaping (Bool) -> Void) {
+    static func searchChallengePlaces(challenge: Challenge, locationManager: CLLocationManager, placesCount: Int, callbackEach: @escaping (Place) -> Void, callbackGeneral: @escaping (Bool) -> Void) {
         let location = cLLocationToGLocation(locationManager: locationManager)
         
-        if (desafio.category.title != "Casa") {
-            let searchByType : Bool = desafio.specificSearch == ""
-            let searchTerm : String = desafio.specificSearch != "" ? desafio.specificSearch : desafio.category.mapsPlaceType
+        if (challenge.category.title != "Casa") {
+            let searchByType : Bool = challenge.specificSearch == ""
+            let searchTerm : String = challenge.specificSearch != "" ? challenge.specificSearch : challenge.category.mapsPlaceType
+//            print("Procurando lugares próximos, com a pesquisa: "+searchTerm+" e raio de 5000m")
             ApiCalls.getNearbyPlaces(search: searchTerm, radius:  5000, location: location, searchByType: searchByType) { data in
+                if data.isEmpty {
+                    callbackGeneral(false)
+                }
+                
                 var placeIds : [String] = []
                 let placeLimit = min(data.count, placesCount*2)
                 if (placeLimit > 0) {
@@ -27,6 +32,7 @@ class PlaceUtils {
                 
                 let quantity = min(placesCount, placeIds.count)
                 var count = 0
+//                print("Pegando detalhes de multiplos lugares")
                 ApiCalls.getMultiplePlaceDetails(placeIds: placeIds, quantity: quantity) { placeInfo in
                     let place = convertPlaceInfoToPlace(placeInfo: placeInfo, locationManager: locationManager)
                     callbackEach(place)

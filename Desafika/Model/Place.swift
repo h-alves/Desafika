@@ -29,6 +29,7 @@ class Place {
     
     func loadDistance(locationManager: CLLocationManager, done: @escaping () -> Void) {
         if (placeInfo != nil) {
+//            print("Pegando distancia para o local:"+name)
             ApiCalls.getDistanceInKm(locationManager: locationManager, placeInfo: placeInfo!) { distance in
                 self.distance = distance
                 done()

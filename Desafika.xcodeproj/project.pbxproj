@@ -36,6 +36,7 @@
 		8CE0EF4A2B167207008F5319 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0EF492B167207008F5319 /* SplashView.swift */; };
 		8CE0EF4C2B167299008F5319 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0EF4B2B167299008F5319 /* StorageService.swift */; };
 		8CE0EF4F2B167316008F5319 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0EF4E2B167316008F5319 /* Duration.swift */; };
+		F02486DB2B1E6A2500DB7741 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02486DA2B1E6A2500DB7741 /* LocationService.swift */; };
 		F078A8952B17C7F700B43363 /* NearByEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078A8912B17C7F700B43363 /* NearByEnum.swift */; };
 		F078A8962B17C7F700B43363 /* GoogleApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078A8922B17C7F700B43363 /* GoogleApiHelper.swift */; };
 		F078A8972B17C7F700B43363 /* GoogleApiHelper+Nearby.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078A8932B17C7F700B43363 /* GoogleApiHelper+Nearby.swift */; };
@@ -82,6 +83,7 @@
 		8CE0EF492B167207008F5319 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		8CE0EF4B2B167299008F5319 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		8CE0EF4E2B167316008F5319 /* Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
+		F02486DA2B1E6A2500DB7741 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		F078A88F2B17C5A800B43363 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F078A8912B17C7F700B43363 /* NearByEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearByEnum.swift; sourceTree = "<group>"; };
 		F078A8922B17C7F700B43363 /* GoogleApiHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleApiHelper.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 			children = (
 				8CE0EF442B166805008F5319 /* RouterService.swift */,
 				8CE0EF4B2B167299008F5319 /* StorageService.swift */,
+				F02486DA2B1E6A2500DB7741 /* LocationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				7842D7B02ADC75170029A359 /* FlexStack.swift in Sources */,
 				78D91BCF2AD87306007B88C4 /* ContentView.swift in Sources */,
 				8CE0EF4F2B167316008F5319 /* Duration.swift in Sources */,
+				F02486DB2B1E6A2500DB7741 /* LocationService.swift in Sources */,
 				785207E72AD8741B00F1DE3C /* Progress.swift in Sources */,
 				8CE0EF4C2B167299008F5319 /* StorageService.swift in Sources */,
 				F078A8952B17C7F700B43363 /* NearByEnum.swift in Sources */,

@@ -319,7 +319,7 @@ class GoogleApi : NSObject {
             return;
         } else {
             let urlString = getUrl(api, input: covertedInput)
-            print("Google api request - \(urlString)")
+//            print("Google api request - \(urlString)")
             let url =  URL(string: urlString.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)!)!
             let urlSession = URLSession(configuration: URLSessionConfiguration.default)
             let urlRequest = URLRequest(url: url)
