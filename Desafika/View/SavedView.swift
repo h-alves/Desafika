@@ -14,12 +14,10 @@ struct SavedView: View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: 32) {
-                    Spacer()
-                    
                     /// Em Progresso
                     VStack(spacing: 16) {
                         VStack(spacing: 12) {
-                            Image("coupleLove")
+                            Image("savedCouple")
                                 .resizable()
                                 .frame(width: 80, height: 42.22)
                             
@@ -27,12 +25,14 @@ struct SavedView: View {
                                 .font(.title)
                                 .fontWeight(.bold)
                                 .foregroundStyle(.meiaNoite)
+                                .multilineTextAlignment(.center)
                         }
                         
                         VStack(spacing: 12) {
                             ForEach(viewModel.inProgress(), id: \.description) { c in
                                 SavedCard(challenge: c) {
-                                    
+                                    viewModel.challengePresented = c
+                                    viewModel.sheetIsPresented = true
                                 } secondayFunc: {
                                     viewModel.finishChallenge(challenge: c)
                                 }
@@ -43,14 +43,15 @@ struct SavedView: View {
                     /// Concluídos
                     VStack(spacing: 12) {
                         Text("Concluídos")
-                            .font(.callout)
+                            .font(.headline)
                             .fontWeight(.semibold)
                             .foregroundStyle(.meiaNoite)
                             .opacity(0.5)
                         
                         ForEach(viewModel.finished(), id: \.description) { c in
                             SavedCard(challenge: c) {
-                                // Abrir o desafio em um popup
+                                viewModel.challengePresented = c
+                                viewModel.sheetIsPresented = true
                             } secondayFunc: {
                                 viewModel.unfinishChallenge(challenge: c)
                             }
@@ -60,6 +61,7 @@ struct SavedView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding(.horizontal, 32)
+            .padding(.top, 32)
             .background(.opala)
             .scrollIndicators(.hidden)
             .onAppear {
@@ -73,10 +75,31 @@ struct SavedView: View {
                     Button {
                         RouterService.shared.navigate(.home)
                     } label: {
-                        Image(systemName: "house.circle.fill")
-                            .font(.system(size: 32))
-                            .fontWeight(.semibold)
-                            .foregroundColor(.quentão)
+                        ZStack {
+                            Image(systemName: "circle.fill")
+                                .font(.system(size: 32))
+                                .fontWeight(.semibold)
+                                .foregroundColor(.desafikadoLight)
+                                .shadow(radius: 10, x: 2, y: 4)
+                            
+                            Image(systemName: "house.circle.fill")
+                                .font(.system(size: 32))
+                                .fontWeight(.semibold)
+                                .foregroundColor(.quentão)
+                        }
+                    }
+                }
+            }
+            .sheet(isPresented: $viewModel.sheetIsPresented) {
+                ChallengeSheet(viewModel: viewModel)
+            }
+            .overlay {
+                if viewModel.popupIsPresented {
+                    PopUp() {
+                        viewModel.deleteChallenge(challenge: viewModel.challengePresented)
+                        viewModel.popupIsPresented = false
+                    } cancel: {
+                        viewModel.popupIsPresented = false
                     }
                 }
             }

@@ -21,7 +21,7 @@ struct Challenge: Equatable {
     var specificSearch : String = ""
     var progress: Progress
     
-    static var test = Challenge(description: "teste", category: .ambient, progress: .none)
+    static var test = Challenge(description: "teste", category: .ambient, progress: .finished)
 }
 
 extension Challenge: Codable {

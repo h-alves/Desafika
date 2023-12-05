@@ -13,22 +13,22 @@ struct ChallengeCard: View {
     var body: some View {
         VStack(spacing: 8) {
             Text(challenge.description)
+                .font(.subheadline)
             
             HStack {
                 Image(systemName: challenge.category.symbol)
-                    .font(.system(size: 8))
+                    .font(.caption)
                 Text(challenge.category.title.capitalized)
-                    .font(.caption2)
+                    .font(.caption)
             }
             .opacity(0.6)
         }
-        .font(.callout)
         .fontWeight(.bold)
         .foregroundStyle(.chiclete)
         .frame(maxWidth: .infinity)
-        .padding(22)
+        .padding(16)
         .multilineTextAlignment(.center)
-        .background(.white)
+        .background(.desafikado)
         .clipShape(RoundedRectangle(cornerRadius: 12))
     }
 }

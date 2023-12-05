@@ -11,10 +11,9 @@ struct OnboardingView: View {
     @ObservedObject var viewModel = OnboardingViewModel()
     
     var body: some View {
-        VStack(spacing: 200) {
-            
+        VStack {
             /// Textos
-            VStack(spacing: 36) {
+            VStack(spacing: 24) {
                 Text("Bem vindo(a)!")
                     .font(.largeTitle)
                     .fontWeight(.bold)
@@ -23,16 +22,16 @@ struct OnboardingView: View {
                 VStack(spacing: 16) {
                     
                     /// Texto 1
-                    HStack {
+                    HStack(spacing: 16) {
                         Image(systemName: "sparkles")
                             .font(.largeTitle)
                             .fontWeight(.bold)
                             .foregroundStyle(.papaya)
                         
-                        VStack {
+                        VStack(spacing: 0) {
                             Text("Descubra novas ideias")
-                                .font(.title2)
-                                .fontWeight(.bold)
+                                .font(.headline)
+                                .fontWeight(.semibold)
                                 .foregroundStyle(.meiaNoite)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                             Text("Receba ideias diferenciadas de atividades para fazer em casal")
@@ -43,16 +42,16 @@ struct OnboardingView: View {
                     }
                     
                     /// Texto 2
-                    HStack {
+                    HStack(spacing: 16) {
                         Image(systemName: "building.2.crop.circle.fill")
                             .font(.largeTitle)
                             .fontWeight(.bold)
                             .foregroundStyle(.papaya)
                         
-                        VStack {
+                        VStack(spacing: 0) {
                             Text("Sugestão de lugares")
-                                .font(.title2)
-                                .fontWeight(.bold)
+                                .font(.headline)
+                                .fontWeight(.semibold)
                                 .foregroundStyle(.meiaNoite)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                             Text("Lugares são sugeridos de forma customizada com cada desafio")
@@ -63,16 +62,16 @@ struct OnboardingView: View {
                     }
                     
                     /// Texto 3
-                    HStack {
+                    HStack(spacing: 16) {
                         Image(systemName: "bookmark.circle.fill")
                             .font(.largeTitle)
                             .fontWeight(.bold)
                             .foregroundStyle(.papaya)
                         
-                        VStack {
+                        VStack(spacing: 0) {
                             Text("Salve seu progresso")
-                                .font(.title2)
-                                .fontWeight(.bold)
+                                .font(.headline)
+                                .fontWeight(.semibold)
                                 .foregroundStyle(.meiaNoite)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                             Text("Conclua desafios e tenha um histórico das suas atividades")
@@ -84,6 +83,8 @@ struct OnboardingView: View {
                 }
             }
             
+            Spacer()
+            
             /// Botão
             Button {
                 viewModel.createList()
@@ -94,16 +95,18 @@ struct OnboardingView: View {
                 Text("Começar")
                     .font(.title3)
                     .fontWeight(.bold)
-                    .foregroundStyle(.white)
+                    .foregroundStyle(.desafikadoLight)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 16)
                     .background(.quentão)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
             }
-            
+            .shadow(radius: 10, x: 2, y: 4)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(.horizontal, 48)
+        .padding(.vertical, 64)
+        .ignoresSafeArea(edges: .bottom)
         .background(.opala)
     }
 }

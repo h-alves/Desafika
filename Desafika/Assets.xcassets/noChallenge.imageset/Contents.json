@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "acceptLight 1.svg",
+      "filename" : "noChallengeLight.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -12,7 +12,7 @@
           "value" : "light"
         }
       ],
-      "filename" : "acceptLight.svg",
+      "filename" : "noChallengeLight 1.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -23,7 +23,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "acceptDark.svg",
+      "filename" : "noChallengeDark.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
