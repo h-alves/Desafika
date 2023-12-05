@@ -11,56 +11,58 @@ struct PlaceCard: View {
     let place: Place
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 3) {
-            Text(place.name.capitalized)
-                .fontWeight(.bold)
-                .foregroundStyle(.meiaNoite)
-                .frame(height: 18)
-            
-            HStack {
-                Text("\(place.distance, specifier: "%.1f") km")
+        Link(destination: URL(string: place.url)!) {
+            VStack(alignment: .leading, spacing: 3) {
+                Text(place.name.capitalized)
+                    .fontWeight(.bold)
+                    .foregroundStyle(.meiaNoite)
+                    .frame(height: 18)
                 
-                if place.price > 0 && place.distance != 0 {
-                    Text("|")
-                }
-                
-                if place.price > 0 {
-                    Text(String(repeating: "$", count: place.price))
-                }
-            }
-            .font(.footnote)
-            .foregroundStyle(.meiaNoite)
-            .opacity(0.5)
-            
-            HStack {
-                HStack(spacing: 0) {
-                    if place.review > 0 {
-                        if place.review >= 1 {
-                            ForEach(1...Int(place.review), id: \.self) { _ in
-                                Image(systemName: "heart.fill")
-                            }
-                        }
-                        if place.review != 5 {
-                            ForEach(1...(5 - Int(place.review)), id: \.self) { _ in
-                                Image(systemName: "heart")
-                            }
-                        }
-                    } else {
-                        Text("Sem avaliações")
-                            .foregroundStyle(.meiaNoite)
-                            .opacity(0.5)
+                HStack {
+                    Text("\(place.distance, specifier: "%.1f") km")
+                    
+                    if place.price > 0 && place.distance != 0 {
+                        Text("|")
+                    }
+                    
+                    if place.price > 0 {
+                        Text(String(repeating: "$", count: place.price))
                     }
                 }
                 .font(.footnote)
-                .foregroundStyle(.papaya)
+                .foregroundStyle(.meiaNoite)
+                .opacity(0.5)
                 
-                Spacer()
+                HStack {
+                    HStack(spacing: 0) {
+                        if place.review > 0 {
+                            if place.review >= 1 {
+                                ForEach(1...Int(place.review), id: \.self) { _ in
+                                    Image(systemName: "heart.fill")
+                                }
+                            }
+                            if place.review != 5 {
+                                ForEach(1...(5 - Int(place.review)), id: \.self) { _ in
+                                    Image(systemName: "heart")
+                                }
+                            }
+                        } else {
+                            Text("Sem avaliações")
+                                .foregroundStyle(.meiaNoite)
+                                .opacity(0.5)
+                        }
+                    }
+                    .font(.footnote)
+                    .foregroundStyle(.papaya)
+                    
+                    Spacer()
+                }
             }
+            .padding(16)
+            .frame(width: 227, height: 93)
+            .background(.desafikado)
+            .clipShape(RoundedRectangle(cornerRadius: 12))
         }
-        .padding(16)
-        .frame(width: 227, height: 93)
-        .background(.desafikado)
-        .clipShape(RoundedRectangle(cornerRadius: 12))
     }
 }
 
