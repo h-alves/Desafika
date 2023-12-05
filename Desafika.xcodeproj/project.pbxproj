@@ -43,18 +43,11 @@
 		F078A8962B17C7F700B43363 /* GoogleApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078A8922B17C7F700B43363 /* GoogleApiHelper.swift */; };
 		F078A8972B17C7F700B43363 /* GoogleApiHelper+Nearby.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078A8932B17C7F700B43363 /* GoogleApiHelper+Nearby.swift */; };
 		F078A8982B17C7F700B43363 /* ApiCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078A8942B17C7F700B43363 /* ApiCalls.swift */; };
-		F078A89F2B1901B200B43363 /* GooglePlaces.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F078A89E2B1901B200B43363 /* GooglePlaces.bundle */; };
-		F078A8A22B1901D700B43363 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F078A8A12B1901D700B43363 /* CoreGraphics.framework */; };
-		F078A8A42B1901DE00B43363 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F078A8A32B1901DE00B43363 /* CoreLocation.framework */; };
-		F078A8A62B1901EB00B43363 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F078A8A52B1901EB00B43363 /* libc++.tbd */; };
-		F078A8A82B1901F300B43363 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F078A8A72B1901F300B43363 /* libz.tbd */; };
-		F078A8AA2B1901FB00B43363 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F078A8A92B1901FB00B43363 /* QuartzCore.framework */; };
-		F078A8AC2B19020000B43363 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F078A8AB2B19020000B43363 /* UIKit.framework */; };
-		F078A8AE2B1903B200B43363 /* GooglePlaces.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F078A8AD2B1903B200B43363 /* GooglePlaces.xcframework */; };
 		F078A8B02B1903DF00B43363 /* PlaceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078A8AF2B1903DF00B43363 /* PlaceUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		77DC8ED5C4874A80927871AA /* Pods-Desafika.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafika.debug.xcconfig"; path = "Target Support Files/Pods-Desafika/Pods-Desafika.debug.xcconfig"; sourceTree = "<group>"; };
 		7842D7AF2ADC75170029A359 /* FlexStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexStack.swift; sourceTree = "<group>"; };
 		7842D7B12ADC7E270029A359 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		7842D7B32ADC7F000029A359 /* PlaceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCard.swift; sourceTree = "<group>"; };
@@ -87,20 +80,13 @@
 		8CE0EF492B167207008F5319 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		8CE0EF4B2B167299008F5319 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		8CE0EF4E2B167316008F5319 /* Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
+		8FF4984ED8FA18BC5B78D024 /* Pods-Desafika.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafika.release.xcconfig"; path = "Target Support Files/Pods-Desafika/Pods-Desafika.release.xcconfig"; sourceTree = "<group>"; };
 		F02486DA2B1E6A2500DB7741 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		F078A88F2B17C5A800B43363 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F078A8912B17C7F700B43363 /* NearByEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearByEnum.swift; sourceTree = "<group>"; };
 		F078A8922B17C7F700B43363 /* GoogleApiHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleApiHelper.swift; sourceTree = "<group>"; };
 		F078A8932B17C7F700B43363 /* GoogleApiHelper+Nearby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GoogleApiHelper+Nearby.swift"; sourceTree = "<group>"; };
 		F078A8942B17C7F700B43363 /* ApiCalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiCalls.swift; sourceTree = "<group>"; };
-		F078A89E2B1901B200B43363 /* GooglePlaces.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GooglePlaces.bundle; sourceTree = "<group>"; };
-		F078A8A12B1901D700B43363 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		F078A8A32B1901DE00B43363 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		F078A8A52B1901EB00B43363 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		F078A8A72B1901F300B43363 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		F078A8A92B1901FB00B43363 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		F078A8AB2B19020000B43363 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		F078A8AD2B1903B200B43363 /* GooglePlaces.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GooglePlaces.xcframework; sourceTree = "<group>"; };
 		F078A8AF2B1903DF00B43363 /* PlaceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,13 +95,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F078A8AC2B19020000B43363 /* UIKit.framework in Frameworks */,
-				F078A8AA2B1901FB00B43363 /* QuartzCore.framework in Frameworks */,
-				F078A8A82B1901F300B43363 /* libz.tbd in Frameworks */,
-				F078A8A62B1901EB00B43363 /* libc++.tbd in Frameworks */,
-				F078A8A42B1901DE00B43363 /* CoreLocation.framework in Frameworks */,
-				F078A8AE2B1903B200B43363 /* GooglePlaces.xcframework in Frameworks */,
-				F078A8A22B1901D700B43363 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,7 +167,7 @@
 			children = (
 				78D91BCB2AD87306007B88C4 /* Desafika */,
 				78D91BCA2AD87306007B88C4 /* Products */,
-				F078A8A02B1901D700B43363 /* Frameworks */,
+				DC411136C573858C597AFE1A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -214,8 +193,6 @@
 				785207DE2AD8735600F1DE3C /* Model */,
 				7842D7AE2ADC74FA0029A359 /* Utils */,
 				78D91BD02AD87308007B88C4 /* Assets.xcassets */,
-				F078A8AD2B1903B200B43363 /* GooglePlaces.xcframework */,
-				F078A89E2B1901B200B43363 /* GooglePlaces.bundle */,
 				78D91BD22AD87308007B88C4 /* Preview Content */,
 			);
 			path = Desafika;
@@ -239,6 +216,15 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		DC411136C573858C597AFE1A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				77DC8ED5C4874A80927871AA /* Pods-Desafika.debug.xcconfig */,
+				8FF4984ED8FA18BC5B78D024 /* Pods-Desafika.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F078A8902B17C7F700B43363 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,19 +236,6 @@
 			path = API;
 			sourceTree = "<group>";
 		};
-		F078A8A02B1901D700B43363 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F078A8AB2B19020000B43363 /* UIKit.framework */,
-				F078A8A92B1901FB00B43363 /* QuartzCore.framework */,
-				F078A8A72B1901F300B43363 /* libz.tbd */,
-				F078A8A52B1901EB00B43363 /* libc++.tbd */,
-				F078A8A32B1901DE00B43363 /* CoreLocation.framework */,
-				F078A8A12B1901D700B43363 /* CoreGraphics.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -270,9 +243,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78D91BD72AD87308007B88C4 /* Build configuration list for PBXNativeTarget "Desafika" */;
 			buildPhases = (
+				114BCF407554D543F85B9496 /* [CP] Check Pods Manifest.lock */,
 				78D91BC52AD87306007B88C4 /* Sources */,
 				78D91BC62AD87306007B88C4 /* Frameworks */,
 				78D91BC72AD87306007B88C4 /* Resources */,
+				17054A01D0C97CE8B1B20737 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -322,12 +297,53 @@
 			buildActionMask = 2147483647;
 			files = (
 				78D91BD42AD87308007B88C4 /* Preview Assets.xcassets in Resources */,
-				F078A89F2B1901B200B43363 /* GooglePlaces.bundle in Resources */,
 				78D91BD12AD87308007B88C4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		114BCF407554D543F85B9496 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Desafika-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		17054A01D0C97CE8B1B20737 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Desafika/Pods-Desafika-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Desafika/Pods-Desafika-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Desafika/Pods-Desafika-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		78D91BC52AD87306007B88C4 /* Sources */ = {
@@ -498,6 +514,7 @@
 		};
 		78D91BD82AD87308007B88C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77DC8ED5C4874A80927871AA /* Pods-Desafika.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -506,6 +523,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Desafika/Preview Content\"";
 				DEVELOPMENT_TEAM = 225S533H7W;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Desafika/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Desafika;
@@ -535,6 +553,7 @@
 		};
 		78D91BD92AD87308007B88C4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FF4984ED8FA18BC5B78D024 /* Pods-Desafika.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -543,6 +562,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Desafika/Preview Content\"";
 				DEVELOPMENT_TEAM = 225S533H7W;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Desafika/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Desafika;
