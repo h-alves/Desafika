@@ -20,18 +20,18 @@ struct CategoryButton: View {
                 Image(systemName: buttonSymbol())
                     .font(.callout)
                     .fontWeight(.bold)
-                    .foregroundStyle(textColor())
+                    .foregroundStyle(buttonColor())
                 
                 Text(category!.title.capitalized)
                     .font(.subheadline)
-                    .fontWeight(.bold)
+                    .fontWeight(.semibold)
                     .foregroundStyle(textColor())
             }
             .padding(.horizontal, 12)
             .padding(.vertical, 8)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .stroke(.quentão, lineWidth: 4)
+                    .stroke(.quentão, lineWidth: 4)
             )
             .background(backgroundColor())
             .clipShape(RoundedRectangle(cornerRadius: 10))
@@ -40,16 +40,23 @@ struct CategoryButton: View {
     
     func backgroundColor() -> Color {
         if category!.isSelected {
-            return .quentão
+            return .quentão
         }
         return .opala
     }
     
     func textColor() -> Color {
         if category!.isSelected {
-            return .opala
+            return .opalaLight
         }
-        return .quentão
+        return .meiaNoite
+    }
+    
+    func buttonColor() -> Color {
+        if category!.isSelected {
+            return .opalaLight
+        }
+        return .quentão
     }
     
     func buttonSymbol() -> String {
@@ -63,10 +70,8 @@ struct CategoryButton: View {
 #Preview {
     VStack {
         CategoryButton(category: .constant(Category(title: "teste", symbol: "house", isSelected: false))) {
-            print("a")
         }
         CategoryButton(category: .constant(Category(title: "teste", symbol: "house", isSelected: true))) {
-            print("b")
         }
     }
     .frame(maxWidth: .infinity, maxHeight: .infinity)

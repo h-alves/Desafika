@@ -7,10 +7,30 @@
 
 import SwiftUI
 
+enum Screen {
+    case splash
+    case onboarding
+    case home
+    case challenge
+    case saved
+}
+
 struct ContentView: View {
+    @StateObject var router = RouterService.shared
+    
     var body: some View {
-        VStack {
-            HomeView()
+        ZStack {
+            switch(router.screen) {
+            case .splash: SplashView()
+            case .onboarding: OnboardingView()
+            case .home: HomeView()
+                    .transition(.opacity)
+            case .challenge: ChallengeView()
+                    .transition(.push(from: .trailing))
+            case .saved: SavedView()
+                    .transition(.push(from: .trailing))
+                
+            }
         }
     }
 }

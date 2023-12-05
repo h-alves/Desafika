@@ -6,12 +6,33 @@
 //
 
 import Foundation
+import Combine
 
 class SavedViewModel: ObservableObject {
     @Published var filteredList: [Challenge] = []
     
+    @Published var sheetIsPresented = false
+    @Published var challengePresented = Challenge.test
+    
+    @Published var popupIsPresented = false
+    
+    var bag = Set<AnyCancellable>()
+    
+    func subscribe() {
+        ChallengeDataSource.shared.$list.sink { challenges in
+            self.updateList()
+        }.store(in: &bag)
+    }
+    
+    func cancelSubscription() {
+        for item in bag {
+            item.cancel()
+        }
+        bag.removeAll()
+    }
+    
     func updateList() {
-        filteredList = ChallengeDataModel.shared.list.filter { c in
+        filteredList = ChallengeDataSource.shared.list.filter { c in
             return c.progress == .inProgress || c.progress == .finished
         }
     }
@@ -33,20 +54,29 @@ class SavedViewModel: ObservableObject {
     }
     
     func finishChallenge(challenge: Challenge) {
-        let index = ChallengeDataModel.shared.list.firstIndex { c in
+        let index = ChallengeDataSource.shared.list.firstIndex { c in
             return c.description == challenge.description
         }
         
-        ChallengeDataModel.shared.list[index!].progress = .finished
+        ChallengeDataSource.shared.list[index!].progress = .finished
         updateList()
     }
     
     func unfinishChallenge(challenge: Challenge) {
-        let index = ChallengeDataModel.shared.list.firstIndex { c in
+        let index = ChallengeDataSource.shared.list.firstIndex { c in
             return c.description == challenge.description
         }
         
-        ChallengeDataModel.shared.list[index!].progress = .inProgress
+        ChallengeDataSource.shared.list[index!].progress = .inProgress
+        updateList()
+    }
+    
+    func deleteChallenge(challenge: Challenge) {
+        let index = ChallengeDataSource.shared.list.firstIndex { c in
+            return c.description == challenge.description
+        }
+        
+        ChallengeDataSource.shared.list[index!].progress = .none
         updateList()
     }
 }
