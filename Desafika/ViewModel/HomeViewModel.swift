@@ -11,6 +11,10 @@ class HomeViewModel: ObservableObject {
     @Published var list: [Category] = CategoryDataSource.shared.list
     @Published var buttonActivated: Bool = false
     
+    init() {
+        _ = LocationService.shared.getLocationManager()
+    }
+    
     func updateList() {
         list = CategoryDataSource.shared.list
     }

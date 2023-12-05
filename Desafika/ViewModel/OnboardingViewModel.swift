@@ -96,7 +96,7 @@ class OnboardingViewModel: ObservableObject {
             Challenge(description: "Tenham um dia de \"fotógrafos de natureza\", explorando um parque ou reserva natural e registrando a beleza ao seu redor.", category: .park, progress: .none),
             Challenge(description: "Em um parque ou praça movimentada, puxem conversa com estranhos de forma engraçada e divertida.", category: .park, progress: .none),
             Challenge(description: "Tenham um dia de \"piquenique gourmet\", preparando comidas sofisticadas para desfrutar ao ar livre.", category: .park, progress: .none),
-            Challenge(description: "Façam um piquenique em um jardim botânico.", category: .park, specificSearch: "jardim botânico", progress: .none)
+            Challenge(description: "Façam um piquenique em um jardim botânico.", category: .park, specificSearch: "jardim botânico", progress: .none),
 
             // MUSEU:
             

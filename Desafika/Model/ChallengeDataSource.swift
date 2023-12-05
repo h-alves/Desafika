@@ -17,7 +17,7 @@ class ChallengeDataSource: ObservableObject {
         didSet {
             if oldValue != list {
                 save()
-                print("Valores diferentes")
+//                print("Valores diferentes")
             }
         }
     }

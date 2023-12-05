@@ -8,12 +8,14 @@
 import SwiftUI
 
 class ChallengeViewModel: ObservableObject {
+    var locationService = LocationService.shared
     @Published var challenge: Challenge = Challenge.test
     @Published var categoryFilter: [Category] = CategoryDataSource.shared.list.filter { c in
         return c.isSelected == true
     }
     @Published var noChallenge: Bool = false
     @Published var places: [Place] = []
+    @Published var loadingPlaces : Bool = false
     
     func getRandomChallenge() {
         let challengeFilter = ChallengeDataSource.shared.list.filter { c in
@@ -30,6 +32,7 @@ class ChallengeViewModel: ObservableObject {
                 newChallenge = challengeFilter.randomElement()!
             }
             challenge = newChallenge
+            loadPlaces()
         }
     }
     
@@ -42,10 +45,29 @@ class ChallengeViewModel: ObservableObject {
     }
     
     func loadPlaces() {
-        places.append(Place(name: "teste 1", category: "Restaurante", price: 1, review: 2.5, distance: 3.7))
-        places.append(Place(name: "teste 2", category: "Restaurante", price: 1, review: 2.5, distance: 3.7))
-        places.append(Place(name: "teste 3", category: "Restaurante", price: 1, review: 2.5, distance: 3.7))
-        places.append(Place(name: "teste 4", category: "Restaurante", price: 1, review: 2.5, distance: 3.7))
-        places.append(Place(name: "teste 5", category: "Restaurante", price: 1, review: 2.5, distance: 3.7))
+        loadingPlaces = true
+        places = []
+        PlaceUtils.searchChallengePlaces(challenge: challenge, locationManager: locationService.getLocationManager(), placesCount: 5) { place in
+            self.places.append(place)
+        } callbackGeneral: { [self] success in
+            if (success) {
+                PlaceUtils.loadMultipleDistances(places: places, locationManager: locationService.getLocationManager()) {
+                    self.loadingPlaces = false
+                }
+            }
+            else {
+                loadingPlaces = false
+            }
+        }
+    }
+    
+    func placesText() -> String {
+        if loadingPlaces {
+            return "Carregando sugestões de lugares para este desafio..."
+        }
+        else if !places.isEmpty {
+            return "Sugerimos alguns lugares para realizar esse desafio:"
+        }
+        return "Não foi possível carregar sugestões de lugares para este desafio."
     }
 }

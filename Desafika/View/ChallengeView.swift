@@ -97,6 +97,7 @@ struct ChallengeView: View {
                                 .frame(width: 80, height: 82)
                                 .shadow(radius: 10, x: 2, y: 4)
                         }
+                        .disabled(viewModel.loadingPlaces)
                         
                         Text("Outro")
                             .font(.footnote)
@@ -128,23 +129,25 @@ struct ChallengeView: View {
                             .resizable()
                             .frame(width: 80, height: 42.22)
                         
-                        Text("Sugerimos alguns lugares para realizar esse desafio:")
+                        Text(viewModel.placesText())
                             .font(.footnote)
                             .foregroundStyle(.meiaNoite)
                             .opacity(0.5)
                             .frame(width: 160)
                     }
                     
-                    ScrollView(.horizontal) {
-                        HStack(spacing: 16) {
-                            ForEach(viewModel.places, id: \.name) { place in
-                                PlaceCard(place: place)
+                    if (!viewModel.loadingPlaces) {
+                        ScrollView(.horizontal) {
+                            HStack(spacing: 16) {
+                                ForEach(viewModel.places, id: \.name) { place in
+                                    PlaceCard(place: place)
+                                }
                             }
+                            .padding(.horizontal, 32)
                         }
-                        .padding(.horizontal, 32)
+                        .padding(.horizontal, -32)
+                        .scrollIndicators(.hidden)
                     }
-                    .padding(.horizontal, -32)
-                    .scrollIndicators(.hidden)
                 }
             }
             
@@ -156,7 +159,6 @@ struct ChallengeView: View {
         .background(.opala)
         .onAppear {
             viewModel.getRandomChallenge()
-            viewModel.loadPlaces()
         }
        
     }
